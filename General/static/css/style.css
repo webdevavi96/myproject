@@ -10,7 +10,11 @@ body {
   padding: 0;
   margin: 0;
 }
-
+.container,
+#navbar,
+nav{
+  min-width: 100%;
+}
 .navbar-nav>li>a {
 
 	text-transform: uppercase;
