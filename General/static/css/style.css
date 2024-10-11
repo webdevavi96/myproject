@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 
 body {
-	background: url('/static/images/img/bg.webp') cover no-repeat center;
+	background: url('/static/images/src/bg.webp') cover no-repeat center;
 }
 
 .navbar-nav>li>a {
