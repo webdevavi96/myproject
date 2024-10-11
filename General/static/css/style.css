@@ -89,7 +89,7 @@ main{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border-bottom: 1.5px solid salmon;
+    border-bottom: 2px solid salmon;
 }
 
 #home h1{
