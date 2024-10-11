@@ -102,6 +102,7 @@ main{
 section{
   height: calc(100vh - 100px);
   color: #727070E8;
+  background: #1FD6C087;
 }
 p{
   margin: 5px;
