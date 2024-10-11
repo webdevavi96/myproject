@@ -100,9 +100,10 @@ main{
 }
 
 section{
+  margin-top: 10px;
   height: calc(100vh - 100px);
   color: #000000;
-  background: #1FD6C087;
+  background: #095E4C87;
 }
 p{
   margin: 5px;
