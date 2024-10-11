@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 
 body {
-	background: url('/General/static/images/src/man-studying-stairs.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 100%;
+  background: url('/static/images/src/man-studying-stairs.jpg');
+  /* Adjust if your static files are served from a different URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
 }
 
 .navbar-nav>li>a {
