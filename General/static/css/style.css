@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 
 body {
-	background: url('/General/static/images/src/bg.jpg') cover no-repeat center;
+	background: url('/General/static/images/src/man-studying-stairs.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
 }
 
 .navbar-nav>li>a {
@@ -27,15 +31,15 @@ body {
 	color: #fff !important;
 }
 
-
+/* 
 .wrapper {
-	width: 100%;
-	position: absolute;
-	height: 100%;
-	background-color: #000;
-	clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 71% 100%);
-	transition: 1s all;
-}
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background-color: #000;
+  clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 71% 100%);
+  transition: 1s all;
+} */
 
 .navbar-brand {
 
@@ -44,12 +48,12 @@ body {
 	margin-bottom: 4px;
 	font-size: 27px;
 }
-
+/* 
 .navbar-red:hover .wrapper {
 
-	clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 65% 100%);
+  clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 65% 100%);
 
-}
+} */
 
 .navbar-brand:hover {
 
@@ -65,6 +69,18 @@ body {
 }
 
 .all-show {
-
 	z-index: 10;
+}
+
+#home{
+  width: 100%;
+  height: 50vh;
+  background: #CBCFFF5E;
+}
+
+#home h1{
+  color: #696969D4;
+}
+#home p{
+  color: #434343A6;
 }
