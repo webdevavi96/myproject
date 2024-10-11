@@ -85,18 +85,25 @@ main{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.8;
   height: 100vh;
 }
 #home{
   width: 100%;
-  height: 50vh;
-  background: #CBCFFF5E;
+  background: #5A5A5A2B;
 }
 
 #home h1{
-  color: #4674FFEB;
+  color: #1D53F6;
 }
 #home p{
-  color: #8888889C;
+  color: #000000BF;
+}
+
+section{
+  height: calc(100vh - 100px);
+  color: #727070E8;
+}
+p{
+  margin: 5px;
+  padding: 5px;
 }
