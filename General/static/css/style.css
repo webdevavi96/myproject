@@ -81,15 +81,14 @@ nav{
 main{
   margin: 0;
   padding: 0;
-  background: url('/static/images/src/man-studying-stairs.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: auto;
 }
 #home{
   width: 100%;
   background: #5A5A5A2B;
+    background: url('/static/images/src/man-studying-stairs.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #home h1{
