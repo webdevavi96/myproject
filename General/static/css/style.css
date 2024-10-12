@@ -16,12 +16,6 @@ body {
 nav{
   min-width: 100%;
 }
-
-.navbar-custom {
-    background-color: #1F92D0; /* Custom color */
-    color: #0A0A0A; /* Optional: change text color for better contrast */
-}
-
 .navbar-nav>li>a {
 
 	text-transform: uppercase;
@@ -74,7 +68,7 @@ nav{
 	color: #fff;
 
 }
-  .navbar-nav li a:hover{
+  .navbar-navli a:hover{
   border-bottom: linear-gradient(45deg, #E91ED0, #A71EE9, #1EA8E9);
 }
 
@@ -88,6 +82,10 @@ nav{
  */
 .all-show {
 	z-index: 10;
+}
+
+.btn1 a{
+  color: #ccc;
 }
 main{
   margin: 0;
