@@ -16,7 +16,7 @@ body {
 nav{
   min-width: 100%;
 }
-.navbar{
+#navmenu{
   background: #F0F8FF;
 }
 .navbar-nav>li>a {
