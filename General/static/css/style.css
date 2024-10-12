@@ -24,7 +24,7 @@ nav{
 	text-transform: uppercase;
 	font-size: 12px;
 	margin-right: 12px;
-	color: #fff;
+	color: #37394D;
 }
 
 
@@ -39,7 +39,7 @@ nav{
 
 .nav-link {
 
-	color: #fff !important;
+	color: #37394D !important;
 }
 
 /* 
@@ -71,14 +71,18 @@ nav{
 	color: #fff;
 
 }
-
-.navbar-red {
-
-	background-color: red;
-	color: #fff;
-
+.navbar a:hover{
+  border-bottom: linear-gradient(45deg, #E91ED0, #A71EE9, #1EA8E9);
 }
 
+/* 
+.navbar-red {
+
+  background-color: red;
+  color: #fff;
+
+}
+ */
 .all-show {
 	z-index: 10;
 }
