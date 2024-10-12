@@ -16,9 +16,7 @@ body {
 nav{
   min-width: 100%;
 }
-#navmenu{
-  background: #F0F8FF;
-}
+
 .navbar-nav>li>a {
 
 	text-transform: uppercase;
