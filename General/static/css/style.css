@@ -17,14 +17,14 @@ nav{
   min-width: 100%;
 }
 #navmenu{
-  background: #F0F8FF;
+  background: #A6D6FFC7;
 }
 .navbar-nav>li>a {
 
 	text-transform: uppercase;
 	font-size: 12px;
 	margin-right: 12px;
-	color: #37394D;
+	color: #28292B;
 }
 
 
@@ -39,7 +39,7 @@ nav{
 
 .nav-link {
 
-	color: #37394D !important;
+	color: #28292B !important;
 }
 
 /* 
