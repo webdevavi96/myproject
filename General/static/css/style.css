@@ -94,18 +94,19 @@ main{
 #home{
   width: 100%;
   background: #5A5A5A2B;
-    background: url('/static/images/src/man-studying-stairs.jpg');
+    background-image: url('/static/images/src/man-studying-stairs.jpg');
     background-size: cover;
+    opacity: 0.86;
     background-repeat: no-repeat;
     background-position: center;
     border-bottom: 5px solid #FF0000;
     margin-top: 0;
 }
 
-#home h1{
+#home>h1{
   color: #00F3FF;
 }
-#home p{
+#home>p{
   color: #000000;
   margin: 5px;
   padding: 5px;
