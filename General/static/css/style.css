@@ -71,7 +71,7 @@ nav{
 	color: #fff;
 
 }
-.navbar a:hover{
+.navbar-nav>li>a:hover{
   border-bottom: linear-gradient(45deg, #E91ED0, #A71EE9, #1EA8E9);
 }
 
