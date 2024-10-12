@@ -103,18 +103,10 @@ main{
 }
 
 #home h1{
-  color: #1D53F6;
+  color: #00F3FF;
 }
 #home p{
-  color: #000000BF;
-}
-
-section{
-  margin-top: 28px;
   color: #000000;
-  background: #00ABFF85;
-}
-p{
   margin: 5px;
   padding: 5px;
   text-justify: justify;
