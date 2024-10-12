@@ -19,7 +19,7 @@ nav{
 
 .navbar-custom {
     background-color: #28292B; /* Custom color */
-    color: #ffffff; /* Optional: change text color for better contrast */
+    color: #0A0A0A; /* Optional: change text color for better contrast */
 }
 
 .navbar-nav>li>a {
