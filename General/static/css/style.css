@@ -16,6 +16,9 @@ body {
 nav{
   min-width: 100%;
 }
+.navbar{
+  background: #F0F8FF;
+}
 .navbar-nav>li>a {
 
 	text-transform: uppercase;
@@ -103,7 +106,6 @@ main{
 
 section{
   margin-top: 28px;
-  height: calc(100vh - 100px);
   color: #000000;
   background: #00ABFF85;
 }
@@ -112,3 +114,4 @@ p{
   padding: 5px;
   text-justify: justify;
 }
+
