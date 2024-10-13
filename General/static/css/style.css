@@ -101,6 +101,7 @@ main{
     background-position: center;
     border-bottom: 5px solid #FF0000;
     margin-top: 0;
+    
 }
 
 #home>h1{
@@ -111,6 +112,6 @@ main{
   color: #504B4B;
   margin: 5px;
   padding: 5px;
-  text-align: justify;
+  text-align: center;
 }
 
