@@ -27,7 +27,7 @@ urlpatterns = [
     path('ourteam/', views.ourteam),
     path('gallery/', views.gallery),
     path('notes/', views.notes),
-    path('registraion/', views.registraion),
+    path('registration/', views.registration),
     path('contactus/', views.contactus),
     path('joinus/', views.joinus),
 ]
