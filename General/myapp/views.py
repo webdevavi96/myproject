@@ -1,31 +1,32 @@
 from django.shortcuts import render
-
-# Create your views here.
-
-def index(request):
-   	 return render(request, 'index.html')
    	 
-def home(request):
-   	 return render(request, 'home.html')
+   	 def render_template(request, template_name):
+   	     return render(request, template_name)
    	 
-def about(request):
-   	 return render(request, 'about.html')  
+   	 def index(request):
+   	     return render_template(request, 'index.html')
    	 
-def ourteam(request):
-   	 return render(request, 'ourteam.html')   
-   	
-def gallery(request):
-   	 return render(request, 'gallery.html')   	 
+   	 def home(request):
+   	     return render_template(request, 'home.html')
    	 
-def notes(request):
-   	 return render(request, 'notes.html')   	 
+   	 def about(request):
+   	     return render_template(request, 'about.html')
    	 
-def registration(request):
-   	 return render(request, 'registration.html') 
+   	 def ourteam(request):
+   	     return render_template(request, 'ourteam.html')
    	 
-def contactus(request):
-   	 return render(request, 'contactus.html')   
+   	 def gallery(request):
+   	     return render_template(request, 'gallery.html')
    	 
-def joinus(request):
-   	 return render(request, 'joinus.html')   	 
+   	 def notes(request):
+   	     return render_template(request, 'notes.html')
+   	 
+   	 def registration(request):
+   	     return render_template(request, 'registration.html')
+   	 
+   	 def contactus(request):
+   	     return render_template(request, 'contactus.html')
+   	 
+   	 def joinus(request):
+   	     return render_template(request, 'joinus.html')
    	 
