@@ -88,6 +88,9 @@ main{
   padding: 0;
   width: 100%;
 }
+section{
+  width: 100%;
+}
 #home{
   height: 370px;
     background-image: url('/static/images/src/man-studying-stairs.jpg');
