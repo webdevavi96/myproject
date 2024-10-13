@@ -5,15 +5,6 @@
   text-align: center;
 }
 
-*{
-  box-sizing: border-box;
-}
-
-.container,
-.navbar{
-  width: 100%;
-  margin: 0;
-}
 
 body {
   padding: 0;
