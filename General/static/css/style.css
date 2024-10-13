@@ -99,7 +99,7 @@ main{
     background-size: cover;
     opacity: 0.86;
     background-repeat: no-repeat;
-    background-position: auto;
+   /*  background-position: auto; */
     border-bottom: 5px solid #FF0000;
     margin-top: 0;
     
