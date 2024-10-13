@@ -96,8 +96,8 @@ body {
 
 .toggle {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
