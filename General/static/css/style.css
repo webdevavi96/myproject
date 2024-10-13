@@ -93,7 +93,7 @@ main{
 }
 #home{
   width: 100%;
-  height: 400px;
+  height: 350px;
     background-image: url('/static/images/src/man-studying-stairs.jpg');
     background-size: cover;
     opacity: 0.86;
@@ -104,12 +104,13 @@ main{
 }
 
 #home>h1{
-  color: #00F3FF;
+  color: #FF0000;
+  text-align: center;
 }
 #home>p{
-  color: #000000;
+  color: #504B4B;
   margin: 5px;
   padding: 5px;
-  text-justify: justify;
+  text-align: justify;
 }
 
