@@ -22,29 +22,29 @@
     <div class="row m-0 p-0 sticky-sm-top" id="navbar">
       <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" style="color: #ccc;" href="#">Students Portal <i class="fa fa-user"></i></a>
+          <a class="navbar-brand" style="color: #ccc;" href="/">Students Portal <i class="fa fa-user"></i></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="/about">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Our Team</a>
+                <a class="nav-link" href="/ourteam">Our Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Gallery</a>
+                <a class="nav-link" href="/gallery">Gallery</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Notes</a>
+                <a class="nav-link" href="/notes">Notes</a>
               </li>
-              <li class="nav-item"><a href="#" class="nav-link">Registration</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+              <li class="nav-item"><a href="/registration" class="nav-link">Registration</a></li>
+              <li class="nav-item"><a href="/contactus" class="nav-link">Contact Us</a></li>
               <!--               <li class="nav-item">
   <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
 </li> -->
@@ -55,8 +55,7 @@
             </div> -->
             <div class="btn1">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="btn btn-outline-primary btn-sm m-2" href="#" role="button">Sign-In</a></li>
-                <li class="nav-item"><a class="btn btn-outline-primary btn-sm m-2" href="#" role="button">Sign-Up</a></li>
+                <li class="nav-item"><a class="btn btn-outline-primary btn-sm m-2" href="/joinus" role="button">Join Us</a></li>
               </ul>
             </div>
           </div>
@@ -66,6 +65,7 @@
 
     <main class="row md-col-12">
      {% block content %}
+     
         {% endblock %}
      </main>
   </div>

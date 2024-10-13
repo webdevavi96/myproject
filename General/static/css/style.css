@@ -21,7 +21,7 @@ nav{
 	text-transform: uppercase;
 	font-size: 12px;
 	margin-right: 12px;
-	color: #28292B;
+	color: #FFFFFF;
 }
 
 
@@ -36,7 +36,7 @@ nav{
 
 .nav-link {
 
-	color: #28292B !important;
+	color: #FFFFFF !important;
 }
 
 /* 
@@ -69,7 +69,7 @@ nav{
 
 }
   .navbar-navli a:hover{
-  border-bottom: linear-gradient(45deg, #E91ED0, #A71EE9, #1EA8E9);
+  border-bottom: 1px solid linear-gradient(45deg, #E91ED0, #A71EE9, #1EA8E9);
 }
 
 /* 
