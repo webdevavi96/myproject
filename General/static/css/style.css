@@ -93,7 +93,7 @@ main{
 }
 #home{
   width: 100%;
-  background: #5A5A5A2B;
+  height: 200px;
     background-image: url('/static/images/src/man-studying-stairs.jpg');
     background-size: cover;
     opacity: 0.86;
