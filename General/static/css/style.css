@@ -11,11 +11,7 @@ body {
   margin: 0;
   background: #000;
 }
-.container,
-#navbar,
-nav{
-  min-width: 100%;
-}
+
 .navbar-nav>li>a {
 
 	text-transform: uppercase;
@@ -29,7 +25,7 @@ nav{
 	padding: .20rem .50rem;
 	font-size: 1.25rem;
 	line-height: 1;
-	background-color: #DED5D5;
+	background-color: transparent;
 	border: 1px solid white;
 
 }
