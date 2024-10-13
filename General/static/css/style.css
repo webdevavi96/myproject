@@ -5,6 +5,9 @@
   text-align: center;
 }
 
+.container{
+  width: 100%;
+}
 
 body {
   padding: 0;
@@ -29,11 +32,6 @@ body {
 	border: 1px solid white;
 }
 
-
-/* Ensure the navbar is full width on smaller screens */
-.navbar {
-  width: 100%;
-}
 
 
 .nav-link {
