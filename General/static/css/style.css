@@ -5,7 +5,8 @@
   text-align: center;
 }
 
-.container{
+.container,
+.navbar{
   width: 100%;
 }
 
@@ -99,7 +100,7 @@ main{
     background-size: cover;
     opacity: 0.86;
     background-repeat: no-repeat;
-   /*  background-position: auto; */
+    background-position: center;
     border-bottom: 5px solid #FF0000;
     margin-top: 0;
     
@@ -112,8 +113,8 @@ main{
 }
 #home>p{
   color: #504B4B;
-  margin: 5px;
-  padding: 5px;
+ /*  margin: 5px;
+ padding: 5px; */
   text-align: center;
 }
 
