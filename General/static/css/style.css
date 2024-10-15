@@ -96,10 +96,10 @@ section{
   border-bottom: 5px solid #FF0000;
   margin: 0;
   padding: 0;
-    
+    z-index: 1000;
 }
 .main-content::before{
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
