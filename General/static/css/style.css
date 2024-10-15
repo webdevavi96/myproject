@@ -117,12 +117,12 @@ section{
   z-index: -1; /* Ensure the overlay is behind the text */
 }
 
-.main-content>h1{
+.main-content>div>h1{
   color: #FF0058;
   text-align: center;
   padding: 10px;
 }
-.main-content>p{
+.main-content>div>p{
   color: #000000;
  /*  margin: 5px;
  padding: 5px; */
