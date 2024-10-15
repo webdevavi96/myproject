@@ -108,7 +108,7 @@ section{
   left: 0;
   width: 100%;
   height: 100%; /* Let the background fill the entire container */
-  background: url('/General/static/images/src/man-studying-stairs.jpg');
+  background: url('/static/images/src/man-studying-stairs.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; /* Center the image */
