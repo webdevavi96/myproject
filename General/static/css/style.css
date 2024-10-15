@@ -97,6 +97,7 @@ section{
   margin: 0;
   padding: 0;
     z-index: 1000;
+    height: 250px;
 }
 .main-content::before{
   content: '';
@@ -104,11 +105,11 @@ section{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 250px;
   background: url('/General/static/images/src/man-studying-stairs.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5; /* Adjust opacity */
+  opacity: 0.89; /* Adjust opacity */
   z-index: -1; /* Ensure the overlay is behind the text */
 }
 .main-content>h1{
