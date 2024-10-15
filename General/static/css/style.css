@@ -113,16 +113,17 @@ section{
   background-size: cover;
   background-position: center; /* Center the image */
   opacity: 0.89; /* Adjust opacity */
+  filter: blur(1px);
   z-index: -1; /* Ensure the overlay is behind the text */
 }
 
 .main-content>h1{
-  color: #FF0000;
+  color: #FF0058;
   text-align: center;
   padding: 10px;
 }
 .main-content>p{
-  color: #504B4B;
+  color: #000000;
  /*  margin: 5px;
  padding: 5px; */
   text-align: center;
