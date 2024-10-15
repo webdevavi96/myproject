@@ -97,7 +97,7 @@ section{
   margin: 0;
   padding: 0;
   z-index: 1000;
-  min-height: 350px; /* Use min-height to allow flexibility */
+  min-height: 100vh; /* Use min-height to allow flexibility */
   color: white; /* Ensure text color is readable over the image */
 }
 
