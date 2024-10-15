@@ -115,4 +115,6 @@ picture>img{
   opacity: 0.75;
   height: 250px;
   width: 100%;
+  position: absolute;
+  
 }
