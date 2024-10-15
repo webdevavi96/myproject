@@ -91,27 +91,31 @@ main{
 section{
   width: 100%;
 }
-.main-content{
+.main-content {
   position: relative;
   border-bottom: 5px solid #FF0000;
   margin: 0;
   padding: 0;
-    z-index: 1000;
-    height: 250px;
+  z-index: 1000;
+  min-height: 250px; /* Use min-height to allow flexibility */
+  color: white; /* Ensure text color is readable over the image */
 }
-.main-content::before{
+
+.main-content::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 250px;
+  height: 100%; /* Let the background fill the entire container */
   background: url('/General/static/images/src/man-studying-stairs.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center; /* Center the image */
   opacity: 0.89; /* Adjust opacity */
   z-index: -1; /* Ensure the overlay is behind the text */
 }
+
 .main-content>h1{
   color: #FF0000;
   text-align: center;
