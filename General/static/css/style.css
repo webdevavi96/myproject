@@ -99,6 +99,7 @@ section{
   z-index: 1000;
   min-height: 100vh; /* Use min-height to allow flexibility */
   color: white; /* Ensure text color is readable over the image */
+  background: transparent;
 }
 
 .main-content::before {
@@ -113,16 +114,16 @@ section{
   background-size: cover;
   background-position: center; /* Center the image */
   opacity: 0.89; /* Adjust opacity */
-  filter: blur(1px);
+  filter: blur(5px);
   z-index: -1; /* Ensure the overlay is behind the text */
 }
 
-.main-content>div>h1{
+.main-content h1{
   color: #FF0058;
   text-align: center;
   padding: 10px;
 }
-.main-content>div>p{
+.main-content p{
   color: #000000;
  /*  margin: 5px;
  padding: 5px; */
