@@ -110,3 +110,9 @@ section{
   text-align: center;
 }
 
+picture>img{
+  z-index: -1;
+  opacity: 0.75;
+  height: 250px;
+  width: 100%;
+}
