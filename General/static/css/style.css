@@ -123,6 +123,9 @@ section{
   text-align: center;
   padding: 10px;
 }
+.main-content h2{
+  color: #000;
+}
 .main-content p{
   color: #000000;
  /*  margin: 5px;
