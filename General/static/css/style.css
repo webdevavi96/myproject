@@ -117,18 +117,3 @@ section{
   filter: blur(5px);
   z-index: -1; /* Ensure the overlay is behind the text */
 }
-.main-content h1{
-  color: #FF0058;
-  text-align: center;
-  padding: 10px;
-}
-.main-content h2{
-  color: #000;
-}
-
-.main-content p{
-  color: #000000;
- /*  margin: 5px;
- padding: 5px; */
-  text-align: justify;
-}
