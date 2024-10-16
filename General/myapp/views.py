@@ -17,8 +17,6 @@ def ourteam(request):
 def gallery(request):
     return render(request, 'gallery.html')
    	 
-def notes(request):
-    return render(request, 'notes.html')
    	 
 def registration(request):
     return render(request, 'registration.html')
