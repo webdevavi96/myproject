@@ -103,10 +103,11 @@ figure{
 }
 
  figure img{
-   height: 80%;
+   height: 70%;
    width: 100%;
  }
  
  figcaption>p{
    color: #000;
+   text-align: center;
  }
