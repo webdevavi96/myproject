@@ -98,7 +98,7 @@ section{
 }
 
 #landing{
-  background: url('/static/images/src/travel-book.jpg" alt="travel-book.jpg');
+  background-image: url('General/static/images/src/travel-book.jpg" alt="travel-book.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
