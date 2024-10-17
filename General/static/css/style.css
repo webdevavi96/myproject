@@ -102,15 +102,15 @@ section{
    height: 400px;
    color: #000;
    text-align: center;
-   background: url('/General/static/images/src/travel-book.jpg') no-repeat center cover;
+/*    background: url('/General/static/images/src/travel-book.jpg') no-repeat center cover; */
  }
  
-/*  .landing2{
+.landing2{
   z-index: -1;
   height: 300px;
   width: 100%;
-} */
- .landing>p{
+} 
+ .landing2>p{
    color: black;
    z-index: 1000;
  }
