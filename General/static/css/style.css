@@ -109,7 +109,7 @@ section{
    height: 300px;
    width: 100%;
  }
- .landing2>p{
+ .landing>p{
    color: black;
    z-index: 1000;
  }
