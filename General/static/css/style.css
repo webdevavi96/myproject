@@ -98,16 +98,11 @@ section{
 }
 
 figure{
-  background: #fff;
+  background: url('/static/images/src/travel-book.jpg" alt="travel-book.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
-}
-
- figure img{
    height: 45%;
-   width: 100%;
- }
- 
- figcaption>p{
    color: #000;
    text-align: center;
  }
