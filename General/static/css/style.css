@@ -98,7 +98,7 @@ section{
 }
 
 .landing{
-  background: url('/static/images/src/laddakh.jpg" alt="travel-book.jpg');
+  background: url('static/images/src/laddakh.jpg" alt="travel-book.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
