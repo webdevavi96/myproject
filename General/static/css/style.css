@@ -102,7 +102,7 @@ section{
    height: 400px;
    color: #000;
    text-align: center;
-   background: url('/static/images/src/travel-book.jpg') no-repeat center cover;
+   background: url('/General/static/images/src/travel-book.jpg') no-repeat center cover;
  }
  
 /*  .landing2{
