@@ -108,7 +108,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(10px);
+   filter: blur(10px);
 }
 
 .landing>p{
