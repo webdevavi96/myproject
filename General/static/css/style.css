@@ -108,6 +108,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(10px);
 }
 
 .landing>p{
@@ -117,3 +118,18 @@ section{
    font-size: 1.3rem;
  }
  
+ 
+ .landing>a{
+   display: block;
+   text-decoration: none;
+   color: #4D4F51;
+   background: #6FA8C9B8;
+   font-size: 1.2rem;
+   padding: 5px 10px;
+   transition: .3s ease-in-out;
+ }
+ 
+ .landing>a:hover{
+   background: #4293C1;
+   color: #403D3D;
+ }
