@@ -116,30 +116,30 @@ right: 0;
  background-size: cover;
  background-repeat: no-repeat;
  background-position: center;
- filter: blur(5px);
+ filter: blur(2px);
  z-index: -1;
  position: absolute;
- height: 350px;
+ height: 360px;
 }
 .landing>p{
-   color: black;
+   color: white;
    font-family: 'Times New Roman', Times, serif;
    text-align: center;
    font-size: 1.3rem;
  }
  
  
- .landing>.btn>#next{
+ .landing>#next{
    text-decoration: none;
-   color: #121212D1;
-   background: #FC4F4F;
+   color: #121212CC;
+   background: #D8F4F6;
    font-size: 1.2rem;
    padding: 5px 10px;
    transition: .3s ease-in-out;
    text-align: center;
  }
  
- .landing>.btn>#next:hover{
-   background: #FD2020;
+ .landing>#next:hover{
+   background: #11B3E9;
    color: #1F1F1F;
  }
