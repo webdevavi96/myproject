@@ -110,10 +110,11 @@ section{
  
 .landing2{
   height: 300px;
-  width: 50%;
 } 
 
 .landing2>img{
-  padding: 5px;
+height: 250px;
+width: 100%;
+border: 1px solid black;
   border-radius: 15px;
 }

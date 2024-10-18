@@ -11,15 +11,15 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
    	 
-def ourteam(request):
-    return render(request, 'ourteam.html')
+def places(request):
+    return render(request, 'places.html')
    	 
 def gallery(request):
     return render(request, 'gallery.html')
    	 
    	 
-def registration(request):
-    return render(request, 'registration.html')
+def booking(request):
+    return render(request, 'booking.html')
     
 def contactus(request):
    	return render(request, 'contactus.html')
