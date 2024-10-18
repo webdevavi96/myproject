@@ -119,8 +119,7 @@ section{
  }
  
  
- .landing>.btn>a{
-   display: block;
+ .landing>.btn>#next{
    text-decoration: none;
    color: #3A3A3B;
    background: #6FA8C9B8;
@@ -130,7 +129,7 @@ section{
    text-align: center;
  }
  
- .landing>.btn>a:hover{
+ .landing>.btn>#next:hover{
    background: #4293C1;
    color: #1F1F1F;
  }
