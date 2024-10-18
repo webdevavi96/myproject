@@ -119,7 +119,7 @@ right: 0;
  filter: blur(5px);
  z-index: -1;
  position: absolute;
- height: 300px;
+ height: 350px;
 }
 .landing>p{
    color: black;
