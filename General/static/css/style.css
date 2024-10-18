@@ -122,7 +122,7 @@ section{
  .landing>.btn>#next{
    text-decoration: none;
    color: #3A3A3B;
-   background: #6FA8C9B8;
+   background: #FC4F4F;
    font-size: 1.2rem;
    padding: 5px 10px;
    transition: .3s ease-in-out;
@@ -130,6 +130,6 @@ section{
  }
  
  .landing>.btn>#next:hover{
-   background: #4293C1;
+   background: #FD2020;
    color: #1F1F1F;
  }
