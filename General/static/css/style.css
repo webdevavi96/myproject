@@ -92,10 +92,6 @@ section{
   width: 100%;
 }
 
-#landing{
-  height: 50vh;
-  width: 100%;
-}
 
 #landing{
   /*  background: url('/General/static/images/src/travel-book.jpg'); 
@@ -123,6 +119,7 @@ right: 0;
  filter: blur(5px);
  z-index: -1;
  position: absolute;
+ height: 300px;
 }
 .landing>p{
    color: black;
