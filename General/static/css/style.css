@@ -97,6 +97,11 @@ section{
   width: 100%;
 }
 
+#landing{
+   background: url('/General/static/images/src/travel-book.jpg') no-repeat center cover; 
+    background: url('/static/images/src/travel-book.jpg') no-repeat center cover; 
+}
+
 .landing{
   width: 100%;
    height: 400px;
