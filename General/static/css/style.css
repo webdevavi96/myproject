@@ -129,7 +129,7 @@ right: 0;
  }
  
  
- .landing>#next{
+ .landing #next{
    text-decoration: none;
    color: #121212CC;
    background: #D8F4F6;
@@ -139,7 +139,7 @@ right: 0;
    text-align: center;
  }
  
- .landing>#next:hover{
+ .landing #next:hover{
    background: #11B3E9;
    color: #1F1F1F;
  }
