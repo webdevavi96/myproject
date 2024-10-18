@@ -116,6 +116,7 @@ right: 0;
  background-size: cover;
  background-repeat: no-repeat;
  background-position: center;
+ filter: blur(5px);
 opacity: 0.89;
  z-index: -1;
  position: absolute;
