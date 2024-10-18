@@ -143,3 +143,10 @@ right: 0;
    background: #11B3E9;
    color: #1F1F1F;
  }
+ 
+ .landing .btn{
+   background: none;
+   height: auto;
+   width: auto;
+   border: none;
+ }
