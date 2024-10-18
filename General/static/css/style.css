@@ -131,23 +131,23 @@ right: 0;
  
  .landing #next{
    text-decoration: none;
-   color: #01BFFF;
+   color: #0849F9;
    background: #FFFFFF;
    font-size: 1.2rem;
    padding: 5px 10px;
    transition: .3s ease-in-out;
    text-align: center;
-   border: 1px solid #FFFFFF;
+   border: 1px solid #0849F9;
    border-radius: 12px;
  }
  
  .landing #next:hover{
-   background: #0896F9;
+   background: #0849F9;
    color: white;
  }
  
  .landing .btn{
-   background:  #0896F9;
+   background: none;
    height: auto;
    width: auto;
 border: none;
