@@ -100,7 +100,7 @@ section{
 #landing{
    background: url('/General/static/images/src/travel-book.jpg'); 
     background: url('/static/images/src/travel-book.jpg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     height: 50vh;
     width: 100%;
