@@ -143,11 +143,11 @@ right: 0;
  
  .landing #next:hover{
    background: #0896F9;
-   color: #0F0F0F;
+   color: white;
  }
  
  .landing .btn{
-   background: none;
+   background:  #0896F9;
    height: auto;
    width: auto;
 border: none;
