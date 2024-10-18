@@ -102,6 +102,7 @@ section{
     background: url('/static/images/src/travel-book.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     height: 300px;
     width: 100%;
 }
