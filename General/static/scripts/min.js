@@ -37,6 +37,6 @@ window.onload = function () {
 
     if (sessionStorage.getItem('visited') === 'true') {
         // Redirect to the home page (or reset the landing page)
-        window.location.href = '/templates/index.html';
+        window.location.href = '{% /home %}';
     }
 };
