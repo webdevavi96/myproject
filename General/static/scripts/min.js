@@ -1,4 +1,4 @@
- alert("It's Working");
+// alert("It's Working");
  
  function next() {
    const next = document.getElementById('next')
@@ -6,4 +6,4 @@
    target.style.display = 'none'
  }
  
- document.addEventListener(onclick, next())
+ document.getElementById('next').addEventListener(onclick, next())
