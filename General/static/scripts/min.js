@@ -8,14 +8,14 @@ function next() {
     sessionStorage.setItem('visited', 'true');
 }
 
-// Checks when the <h1> element becomes visible and removes extra margin
+// Checks when the specific div becomes visible and removes extra margin
 function checkVisibility() {
-    const headingElement = document.querySelector('h1.mt-5');
+    const headingElement = document.getElementById('myUniqueDiv'); // Replace with your unique ID
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Remove the 'mt-5' class when <h1> is visible
+                // Remove the 'mt-5' class when the specific div is visible
                 headingElement.classList.remove('mt-5');
             }
         });
@@ -32,6 +32,9 @@ document.getElementById('next').addEventListener('click', () => {
 
 // Check if the user has visited before when the page loads
 window.onload = function () {
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
+
     if (sessionStorage.getItem('visited') === 'true') {
         // Redirect to the home page (or reset the landing page)
         window.location.href = '/General/templates/index.html';
