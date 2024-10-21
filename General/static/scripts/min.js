@@ -19,7 +19,7 @@ function checkVisibility() {
                 headingElement.classList.remove('mt-5');
             }
         });
-    }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+    }, { threshold: 0.5 }); // Trigger when 10% of the element is visible
 
     observer.observe(headingElement);
 }
@@ -37,6 +37,6 @@ window.onload = function () {
 
     if (sessionStorage.getItem('visited') === 'true') {
         // Redirect to the home page (or reset the landing page)
-        window.location.href = '/General/templates/index.html';
+        window.location.href = '/templates/index.html';
     }
 };
