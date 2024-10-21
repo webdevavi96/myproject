@@ -10,6 +10,7 @@ body {
   padding: 0;
   margin: 0;
   background: #000;
+  scroll-snap-align: center;
   scroll-behavior: smooth;
 }
 
@@ -83,6 +84,8 @@ body {
 .btn1 a{
   color: #ccc;
 }
+
+/* Home Page Styling Starts Here => */
 
 main{
   margin: 0;
@@ -160,3 +163,6 @@ opacity: 0.89;
 border: none;
 
  }
+ 
+ 
+ 
