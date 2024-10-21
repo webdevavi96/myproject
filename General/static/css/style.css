@@ -99,7 +99,7 @@ section{
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center; */
-    height: 350px;
+    height: 100dvh;
     min-width: 100%;
     display: flex;
     align-items: center;
@@ -125,7 +125,7 @@ right: 0;
 opacity: 0.89;
  z-index: -1;
  position: absolute;
- height: 400px;
+ height: 100%;
 }
 .landing>p{
    color: white;
