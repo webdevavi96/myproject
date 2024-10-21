@@ -107,14 +107,17 @@ section{
     margin-bottom: 28px;
     border-bottom: 2px solid red;
 }
+.landing{
+  --bg: url('/static/images/src/travel-book.jpg');
+}
 .landing::before {
   content: '';
   top: 0;
 bottom: 0;
 left: 0;
 right: 0;
- background: url('/General/static/images/src/travel-book.jpg');
- background: url('/static/images/src/travel-book.jpg');
+ background: var(--bg);
+ /* background: url('/static/images/src/travel-book.jpg'); */
  background-size: cover;
  background-repeat: no-repeat;
  background-position: center;
