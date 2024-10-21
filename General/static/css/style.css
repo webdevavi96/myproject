@@ -10,6 +10,7 @@ body {
   padding: 0;
   margin: 0;
   background: #000;
+  scroll-behavior: smooth;
 }
 
 .navbar-nav>li>a {
