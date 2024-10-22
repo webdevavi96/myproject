@@ -203,3 +203,18 @@ section {
 .about .card>p{
   font-family: 'Allerta Stencil', sans-serif;
 }
+
+
+
+/* css for join us */
+#register{
+  all: unset;
+  text-decoration: underline;
+  color: #18A8FF;
+  font-size: 1rem;
+  transition: ease .2s;
+}
+
+#register:hover{
+  color: #1869FF;
+}

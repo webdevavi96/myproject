@@ -40,3 +40,14 @@ window.onload = function () {
         window.location.href = '#';
     }
 };
+
+
+
+function register() {
+  const registerShow = document.getElementById('sign-up');
+ const registerBtn = document.getElementById('register');
+  registerShow.style.display = 'block';
+  registerBtn.style.display = 'none';
+}
+
+document.getElementById('register').addEventListener(click, register);

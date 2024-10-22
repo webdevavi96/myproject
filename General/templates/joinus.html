@@ -6,10 +6,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Join-Us</title>
+  <title>Join Us</title>
 
-<!-- icon placed here.... -->
-<link rel="shortcut icon" type="image/x-icon" href="/static/images/src/icon.png">
+  <!-- icon placed here.... -->
+  <link rel="shortcut icon" type="image/x-icon" href="/static/images/src/icon.png">
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
@@ -23,7 +23,7 @@
   <div class="row m-0 p-0 sticky-top">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-    <i class="fa fa-book p-1"></i><a class="navbar-brand" href="/home">TRAVEL VISTA</a>
+        <i class="fa fa-book p-1"></i><a class="navbar-brand" href="/home">TRAVEL VISTA</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -39,13 +39,12 @@
             <li class="nav-item">
               <a class="nav-link" href="/places">Places</a>
             </li>
-          
             <li class="nav-item"><a href="/booking" class="nav-link">Bookings</a></li>
             <li class="nav-item"><a href="/contactus" class="nav-link">Contact Us</a></li>
           </ul>
           <div class="btn1">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="btn btn-outline-primary btn-sm " href="/joinus" role="button">Join Us</a></li>
+              <li class="nav-item"><a class="btn btn-outline-primary btn-sm" href="/joinus" role="button">Join Us</a></li>
             </ul>
           </div>
         </div>
@@ -53,29 +52,59 @@
     </nav>
   </div>
 
+  <main class="row w-100 m-0 p-0">
+    <h1 style="text-align: center; padding: 5px;">Join Us</h1>
+    
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Sign In</h3>
+          <form>
+            <div class="mb-3">
+              <label for="signinEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="signinEmail" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+              <label for="signinPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="signinPassword" placeholder="Enter your password">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+          </form>
+        </div>
+        <div class="sign-up" style="display: none;">
+        <div class="col-md-6">
+          <h3>Sign Up</h3>
+          <form>
+            <div class="mb-3">
+              <label for="signupName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="signupName" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label for="signupEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+              <label for="signupPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="signupPassword" placeholder="Create a password">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </form>
+        </div>
+        </div>
+        <div class="register" id="sign-up">
+          <button id="register">Don't have an account. Register Here....</button>
+        </div>
+      </div>
+    </div>
 
-<main class="row w-100 m-0 p-0">
-<h1 style="text-align: center; padding: 5px;">Join Us</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-
-
-  <footer class="bg-dark w-100">
-    <p style="color: white; font-size: 14px; text-align: center; font-family: 'Allerta Stencil', sans-serif; padding: 5px;">
-      copyrights reserved at &copy;TRAVEL VISTA official.....
-    </p>
-  </footer>
-</main>
+    <footer class="bg-dark w-100">
+      <p style="color: white; font-size: 14px; text-align: center; font-family: 'Allerta Stencil', sans-serif; padding: 5px;">
+        copyrights reserved at &copy;TRAVEL VISTA official.....
+      </p>
+    </footer>
+  </main>
 
 </div>
-
-
-
 
   <!-- Custom JS file -->
   <script src="{% static 'scripts/min.js' %}"></script>
