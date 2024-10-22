@@ -187,7 +187,7 @@ section {
 /* About Us section css starts here.....=> */
 
 .about{
- background-color: #FFF4E4; /* Light Sand */
+ background-color: #F6F6F6; /* Light Sand */
     color: #3E2723; /* Dark Brown */
     font-family: Arial, sans-serif;
 }
@@ -197,7 +197,7 @@ section {
     background: linear-gradient(145deg, #cacaca, #f0f0f0);
     box-shadow: 31px 31px 36px #727272,
     -31px -31px 36px #ffffff;
-    color: white;
+    color: #370006;
 }
 
 .about .card>p{
