@@ -14,9 +14,6 @@ def about(request):
 def places(request):
     return render(request, 'places.html')
    	 
-def gallery(request):
-    return render(request, 'gallery.html')
-   	 
    	 
 def booking(request):
     return render(request, 'booking.html')
@@ -24,6 +21,8 @@ def booking(request):
 def contactus(request):
    	return render(request, 'contactus.html')
    	 
-def joinus(request):
-    return render(request, 'joinus.html')
+def register(request):
+    return render(request, 'register.html')
    	 
+def login(request):
+    return render(request, 'login.html')

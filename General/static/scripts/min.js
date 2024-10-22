@@ -40,17 +40,3 @@ window.onload = function () {
         window.location.href = '#';
     }
 };
-
-
-
-// form-toggle.js
-
-document.getElementById('toggleToSignup').addEventListener('click', function() {
-  document.getElementById('signinForm').style.display = 'none'; // Hide sign-in form
-  document.getElementById('signupForm').style.display = 'block'; // Show sign-up form
-});
-
-document.getElementById('toggleToSignin').addEventListener('click', function() {
-  document.getElementById('signupForm').style.display = 'none'; // Hide sign-up form
-  document.getElementById('signinForm').style.display = 'block'; // Show sign-in form
-});

@@ -25,8 +25,8 @@ urlpatterns = [
     path('home/', views.home),
     path('about/', views.about),
     path('places/', views.places),
-    path('gallery/', views.gallery),
     path('booking/', views.booking),
     path('contactus/', views.contactus),
-    path('joinus/', views.joinus),
+    path('register/' views.register),
+    path('login/' views.login),
 ]
