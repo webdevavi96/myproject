@@ -129,8 +129,8 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  filter: blur(5px);
-  opacity: 0.89;
+  filter: blur(3.5px);
+  opacity: 0.95;
   z-index: -1;
   position: absolute;
   height: 100%;
