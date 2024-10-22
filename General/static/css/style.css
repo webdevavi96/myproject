@@ -193,10 +193,11 @@ section {
 }
 
 .about .card{
-    background-color: #A89F91; /* Warm Grey */
+   border-radius: 25px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: 31px 31px 36px #727272,
+    -31px -31px 36px #ffffff;
     color: white;
-    text-align: center;
-    padding: 50px 20px;
 }
 
 .about .card>p{
