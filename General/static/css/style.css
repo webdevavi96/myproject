@@ -182,3 +182,23 @@ section {
 .card:hover {
   transform: scale(1.05);
 }
+
+
+/* About Us section css starts here.....=> */
+
+.about{
+ background-color: #FFF4E4; /* Light Sand */
+    color: #3E2723; /* Dark Brown */
+    font-family: Arial, sans-serif;
+}
+
+.about .card{
+    background-color: #A89F91; /* Warm Grey */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.about .card>p{
+  font-family: 'Allerta Stencil', sans-serif;
+}
