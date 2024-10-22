@@ -6,10 +6,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Contact-Us</title>
+  <title>Contact Us</title>
 
-<!-- icon placed here.... -->
-<link rel="shortcut icon" type="image/x-icon" href="/static/images/src/icon.png">
+  <!-- icon placed here.... -->
+  <link rel="shortcut icon" type="image/x-icon" href="/static/images/src/icon.png">
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
@@ -18,12 +18,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
-<div class="container-fluid m-0 p-0" style="border: 2px solid black;">
-  <div class="row m-0 p-0 sticky-top">
+<body class="bg-dark text-light">
+  <div class="container-fluid m-0 p-0">
+   <div class="row m-0 p-0 sticky-top">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-    <i class="fa fa-book p-1"></i><a class="navbar-brand" href="/home">TRAVEL VISTA</a>
+        <i class="fa fa-book p-1"></i><a class="navbar-brand" href="/home">TRAVEL VISTA</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
           </ul>
           <div class="btn1">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="btn btn-outline-primary btn-sm " href="/joinus" role="button">Join Us</a></li>
+              <li class="nav-item"><a class="btn btn-outline-primary btn-sm" href="/joinus" role="button">Join Us</a></li>
             </ul>
           </div>
         </div>
@@ -55,29 +55,44 @@
     </nav>
   </div>
 
+    <main class="row w-100 m-0 p-0">
+      <h1 class="text-center my-5">Contact Us</h1>
+      <p class="text-center">We would love to hear from you! Please fill out the form below to get in touch with us.</p>
 
-<main class="row w-100 m-0 p-0">
-<h1 style="text-align: center; padding: 5px;">Contact Us</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti in illum sit eligendi repellendus eos, sint doloribus debitis doloremque neque culpa nulla itaque, iste saepe veritatis delectus maiores consequatur magnam quos quaerat quia. Placeat nihil fuga totam, quaerat, vero magni expedita cupiditate aperiam.</p>
+      <div class="col-md-8 offset-md-2">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
 
+      <div class="col-md-8 offset-md-2 text-center my-5">
+        <h2>Connect with Us</h2>
+        <p>Follow us on social media:</p>
+        <a href="https://www.facebook.com" class="text-light mx-2"><i class="fa fa-facebook-official fa-2x"></i></a>
+        <a href="https://www.twitter.com" class="text-light mx-2"><i class="fa fa-twitter-square fa-2x"></i></a>
+        <a href="https://www.instagram.com" class="text-light mx-2"><i class="fa fa-instagram fa-2x"></i></a>
+        <a href="https://www.linkedin.com" class="text-light mx-2"><i class="fa fa-linkedin-square fa-2x"></i></a>
+      </div>
 
-  <footer class="bg-dark w-100">
-    <p style="color: white; font-size: 14px; text-align: center; font-family: 'Allerta Stencil', sans-serif; padding: 5px;">
-      copyrights reserved at &copy;TRAVEL VISTA official.....
-    </p>
-  </footer>
-</main>
-
-</div>
-
-
-
+      <footer class="bg-dark w-100">
+        <p style="color: white; font-size: 14px; text-align: center; font-family: 'Allerta Stencil', sans-serif; padding: 5px;">
+          copyrights reserved at &copy; TRAVEL VISTA official.....
+        </p>
+      </footer>
+    </main>
+  </div>
 
   <!-- Custom JS file -->
   <script src="{% static 'scripts/min.js' %}"></script>
