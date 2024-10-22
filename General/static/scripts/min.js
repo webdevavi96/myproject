@@ -43,11 +43,14 @@ window.onload = function () {
 
 
 
-function register() {
-  const registerShow = document.getElementById('sign-up');
- const registerBtn = document.getElementById('register');
-  registerShow.style.display = 'block';
-  registerBtn.style.display = 'none';
-}
+// form-toggle.js
 
-document.getElementById('register').addEventListener(click, register);
+document.getElementById('toggleToSignup').addEventListener('click', function() {
+  document.getElementById('signinForm').style.display = 'none'; // Hide sign-in form
+  document.getElementById('signupForm').style.display = 'block'; // Show sign-up form
+});
+
+document.getElementById('toggleToSignin').addEventListener('click', function() {
+  document.getElementById('signupForm').style.display = 'none'; // Hide sign-up form
+  document.getElementById('signinForm').style.display = 'block'; // Show sign-in form
+});

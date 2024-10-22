@@ -57,7 +57,7 @@
     
     <div class="container my-4">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" id="signinForm">
           <h3>Sign In</h3>
           <form>
             <div class="mb-3">
@@ -69,10 +69,11 @@
               <input type="password" class="form-control" id="signinPassword" placeholder="Enter your password">
             </div>
             <button type="submit" class="btn btn-primary">Sign In</button>
+            <button type="button" class="btn btn-link" id="toggleToSignup">Don't have an account? Sign Up</button>
           </form>
         </div>
-        <div class="sign-up" style="display: none;">
-        <div class="col-md-6">
+        
+        <div class="col-md-6" id="signupForm" style="display: none;">
           <h3>Sign Up</h3>
           <form>
             <div class="mb-3">
@@ -88,11 +89,8 @@
               <input type="password" class="form-control" id="signupPassword" placeholder="Create a password">
             </div>
             <button type="submit" class="btn btn-primary">Sign Up</button>
+            <button type="button" class="btn btn-link" id="toggleToSignin">Already have an account? Sign In</button>
           </form>
-        </div>
-        </div>
-        <div class="register" id="sign-up">
-          <button id="register">Don't have an account. Register Here....</button>
         </div>
       </div>
     </div>
