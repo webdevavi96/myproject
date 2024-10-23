@@ -1,20 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const lazyLoadImages = document.querySelectorAll(".lazyload");
-
-  lazyLoadImages.forEach(img => {
-    const actualSrc = img.getAttribute('data-src');
-
-    // Create a new image element to preload the image
-    const tempImg = new Image();
-    tempImg.src = actualSrc;
-
-    // When the actual image is loaded
-    tempImg.onload = function() {
-      img.src = actualSrc;
-      img.classList.remove('lazyload'); // Remove lazyload class when done
-    };
-  });
-});
 
 
 // Hides the landing page and saves the user's action
