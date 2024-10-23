@@ -16,20 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Hide the main body initially
-    document.querySelector(".main-body").style.display = "none";
-
-    // Show the main body after 2 seconds
-    setTimeout(function() {
-        // Hide the loading body
-        document.querySelector(".loading-body").style.display = "none";
-        
-        // Show the main body
-        document.querySelector(".main-body").style.display = "block";
-    }, 2000);  // 2000 milliseconds = 2 seconds
-});
-
 
 // Hides the landing page and saves the user's action
 function next() {
