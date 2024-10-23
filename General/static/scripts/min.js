@@ -1,3 +1,36 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const lazyLoadImages = document.querySelectorAll(".lazyload");
+
+  lazyLoadImages.forEach(img => {
+    const actualSrc = img.getAttribute('data-src');
+
+    // Create a new image element to preload the image
+    const tempImg = new Image();
+    tempImg.src = actualSrc;
+
+    // When the actual image is loaded
+    tempImg.onload = function() {
+      img.src = actualSrc;
+      img.classList.remove('lazyload'); // Remove lazyload class when done
+    };
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Hide the main body initially
+    document.querySelector(".main-body").style.display = "none";
+
+    // Show the main body after 2 seconds
+    setTimeout(function() {
+        // Hide the loading body
+        document.querySelector(".loading-body").style.display = "none";
+        
+        // Show the main body
+        document.querySelector(".main-body").style.display = "block";
+    }, 2000);  // 2000 milliseconds = 2 seconds
+});
+
+
 // Hides the landing page and saves the user's action
 function next() {
     const target = document.querySelector('.landing');
@@ -40,3 +73,4 @@ window.onload = function () {
         window.location.href = '#';
     }
 };
+
