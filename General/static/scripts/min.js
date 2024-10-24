@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Hide the main body initially
     document.querySelector(".main-body").style.display = "none";
-    alert('hello')
+    //alert('hello')
 
     // Show the main body after 2 seconds
     setTimeout(function() {
@@ -10,11 +10,9 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // Show the main body
         document.querySelector(".main-body").style.display = "block";
-    }, 2000);  // 2000 milliseconds = 2 seconds
+    }, 1000);  // 2000 milliseconds = 2 seconds
 });
 
-
-alert("hello");
 
 // Hides the landing page and saves the user's action
 function next() {
