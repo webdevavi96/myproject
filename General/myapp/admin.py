@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import CustomUser  # Update the import to CustomUser
+from .models import User  # Ensure this matches the model name in models.py
 
-admin.site.register(CustomUser)  # Register the CustomUser model
+admin.site.register(User)  # Register the User model
