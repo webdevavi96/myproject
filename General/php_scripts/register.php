@@ -13,14 +13,30 @@ try {
 
     // Check if form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
+        // Collect and sanitize input data
+        $name = trim($_POST['name']);
+        $email = trim($_POST['email']);
         $password = $_POST['password'];
+
+        // Validate input
+        if (empty($name) || empty($email) || empty($password)) {
+            echo "Please fill in all fields.";
+            exit();
+        }
+
+        // Check if email already exists
+        $stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            echo "Email already registered. Please use another email.";
+            exit();
+        }
 
         // Hash the password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        // Prepare and execute SQL query
+        // Prepare and execute SQL query to insert user
         $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)");
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':email', $email);

@@ -2,7 +2,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,11 +74,6 @@
               <li class="nav-item"><a href="/booking" class="nav-link">Bookings</a></li>
               <li class="nav-item"><a href="/contactus" class="nav-link">Contact Us</a></li>
             </ul>
-          <!--   <div class="btn1">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="btn btn-outline-primary btn-sm" href="/joinus" role="button">Join Us</a></li>
-            </ul>
-          </div> -->
           </div>
         </div>
       </nav>
@@ -89,18 +83,18 @@
       <div class="container my-4 d-flex justify-content-center align-items-center">
         <div class="col-md-6" id="signupForm">
           <h3 class="text-center">Sign Up</h3>
-          <form target="/php_scripts/register.php" method="POST">
+          <form action="/php_scripts/register.php" method="POST">
             <div class="mb-3">
               <label for="signupName" class="form-label">Name</label>
-              <input type="text" class="form-control" id="signupName" placeholder="Enter your name">
+              <input type="text" class="form-control" id="signupName" name="name" placeholder="Enter your name" required>
             </div>
             <div class="mb-3">
               <label for="signupEmail" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email">
+              <input type="email" class="form-control" id="signupEmail" name="email" placeholder="Enter your email" required>
             </div>
             <div class="mb-3">
               <label for="signupPassword" class="form-label">Password</label>
-              <input type="password" class="form-control" id="signupPassword" placeholder="Create a password">
+              <input type="password" class="form-control" id="signupPassword" name="password" placeholder="Create a password" required>
             </div>
             <button type="submit" class="btn btn-primary w-100">Sign Up</button>
             <a href="/login" class="btn btn-link d-block text-center mt-3">Already have an account? Sign In</a>
@@ -114,7 +108,6 @@
         </p>
       </footer>
     </main>
-
   </div>
 
   <!-- Custom JS file -->
@@ -123,5 +116,4 @@
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
 </html>

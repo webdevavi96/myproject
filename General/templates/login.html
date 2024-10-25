@@ -92,18 +92,19 @@
     <div class="container my-4 d-flex justify-content-center align-items-center">
       <div class="col-md-6" id="signinForm">
         <h3 class="text-center">Sign In</h3>
-        <form target="/php_scripts/login.php" action="POST">
-          <div class="mb-3">
-            <label for="signinEmail" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="signinEmail" placeholder="Enter your email">
-          </div>
-          <div class="mb-3">
-            <label for="signinPassword" class="form-label">Password</label>
-            <input type="password" class="form-control" id="signinPassword" placeholder="Enter your password">
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Sign In</button>
-          <a href="/register" class="d-block text-center mt-3">Don't have an account? Register here...</a>
-        </form>
+        <form action="/php_scripts/login.php" method="POST"> <!-- Corrected action and method -->
+  <div class="mb-3">
+    <label for="signinEmail" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="signinEmail" name="email" placeholder="Enter your email" required> <!-- Added name attribute -->
+  </div>
+  <div class="mb-3">
+    <label for="signinPassword" class="form-label">Password</label>
+    <input type="password" class="form-control" id="signinPassword" name="password" placeholder="Enter your password" required> <!-- Added name attribute -->
+  </div>
+  <button type="submit" class="btn btn-primary w-100">Sign In</button>
+  <a href="/register" class="d-block text-center mt-3">Don't have an account? Register here...</a>
+</form>
+
       </div>
     </div>
 

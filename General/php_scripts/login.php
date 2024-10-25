@@ -19,8 +19,8 @@ if ($conn->connect_error) {
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data and sanitize it
-    $email = htmlspecialchars($_POST['email']);
-    $password = htmlspecialchars($_POST['password']);
+    $email = htmlspecialchars(trim($_POST['email']));
+    $password = htmlspecialchars(trim($_POST['password']));
 
     // Fetch the user from the database
     $sql = "SELECT * FROM users WHERE email = ?";
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else {
         // Login failed
-        echo "Invalid email or password.";
+        echo "Invalid email or password."; // Consider logging this for debugging
     }
 
     $stmt->close();
