@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import User  # Ensure this matches the model name in models.py
+from .models import CustomUser  # Update the import statement
 
-admin.site.register(User)  # Register the User model
+admin.site.register(CustomUser)  # Register the renamed model
