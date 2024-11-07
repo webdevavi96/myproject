@@ -116,28 +116,31 @@
   <!-- Custom JS file -->
   <script src="{% static 'scripts/min.js' %}">
     //Declaring a function to confirm the password
-    const userPassword = document.getElementById("userPassword")
-    const confirmPassword = document.getElementById("confirmPassword")
-    const errorMessage = document.getElementById("errorMessage")
+    // Declaring variables for the password and confirm password inputs and error message
+const userPassword = document.getElementById("userPassword");
+const confirmPassword = document.getElementById("confirmPassword");
+const errorMessage = document.getElementById("errorMessage");
 
-    //decalring the function block which check the user Input
-    function checkPassword(){
-      if(confirmPassword.value !== userPassword.value){
-        errorMessage.textContent = "Password didn't matched. Please Check your Password"
-        errorMessage.style.color = "red"
-        console.log("password unmatche")
-
-      }
-      else{
-        errorMessage.textContent = "Password Matched"
-        errorMessage.style.color = "green"
-        console.log("matched")
-      }
+// Function to check if the passwords match
+function checkPassword() {
+    if (confirmPassword.value !== userPassword.value) {
+        errorMessage.textContent = "Password didn't match. Please check your input.";
+        errorMessage.style.color = "red";
+        console.log("Passwords don't match");
+    } else {
+        errorMessage.textContent = "Passwords matched!";
+        errorMessage.style.color = "green";
+        console.log("Passwords match");
     }
+}
 
-    //Calling the function to match password on user input
-    confirmPassword.addEventListener('input', checkPassword)
-    console.log(userPassword, confirmPassword)
+// Add event listeners to both password fields to check on input
+userPassword.addEventListener('input', checkPassword);
+confirmPassword.addEventListener('input', checkPassword);
+
+// Logging the inputs for debugging
+console.log(userPassword, confirmPassword);
+
   </script>
 
   <!-- Bootstrap JS Bundle -->
