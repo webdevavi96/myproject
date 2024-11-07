@@ -125,16 +125,19 @@
       if(confirmPassword.value !== userPassword.value){
         errorMessage.textContent = "Password didn't matched. Please Check your Password"
         errorMessage.style.color = "red"
+        console.log("password unmatche")
 
       }
       else{
         errorMessage.textContent = "Password Matched"
         errorMessage.style.color = "green"
+        console.log("matched")
       }
     }
 
     //Calling the function to match password on user input
     confirmPassword.addEventListener('input', checkPassword)
+    console.log(userPassword, confirmPassword)
   </script>
 
   <!-- Bootstrap JS Bundle -->
