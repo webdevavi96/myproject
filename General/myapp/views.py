@@ -45,5 +45,5 @@ def login(request):
            login(request, user)
            return redirect('home')
        else:
-           return HttpResponse("username or password is Incorrect. Please check and enter agqin to Log in into your account.")
+           return HttpResponse("username or password is Incorrect. Please check and enter again to Login into your account.")
     return render(request, 'login.html')
