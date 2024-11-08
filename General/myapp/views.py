@@ -55,7 +55,7 @@ def login(request):
         if user is None:
            login(request, user)
            return redirect('home')  # Use the URL name 'home'
-        else
+        else:
            return HttpResponse("Username or password is incorrect. Please check your credentials.")
     
     return render(request, 'login.html')
