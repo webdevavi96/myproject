@@ -29,21 +29,30 @@ def register(request):
         userEmail = request.POST.get('userEmail')
         userPassword = request.POST.get('userPassword')
         confirmPassword = request.POST.get('confirmPassword')
+        
         if userPassword != confirmPassword:
-           return HttpResponse("Password did not macth. Please enter a valid Password.")
+            return HttpResponse("Password did not match. Please enter a valid password.")
         else:
-            user = User.objects.create_user(username=userName,useremail=userEmail,Password=userPassword)
+            # Create a new user
+            user = User.objects.create_user(username=userName, email=userEmail, password=userPassword)
             user.save()
-            return redirect('login.html')
+            return redirect('login')  # Use the URL name 'login'
+    
     return render(request, 'register.html')
+
 def login(request):
     if request.method == 'POST':
-       userName = request.POST.get('userName')
-       userPassword = request.POST.get('userPassword')
-       user = authenticate(request, userName = userName, userPassword = userPassword)
-       if user is not None:
-           login(request, user)
-           return redirect('home')
-       else:
-           return HttpResponse("username or password is Incorrect. Please check and enter again to Login into your account.")
+        userName = request.POST.get('userName')
+        userPassword = request.POST.get('userPassword')
+        
+        # Authenticate user
+        user = authenticate(request, username=userName, password=userPassword)
+        
+        if user is not None:
+            login(request, user)
+            return redirect('home')  # Use the URL name 'home'
+        else:
+            return HttpResponse("Username or password is incorrect. Please check your credentials.")
+    
     return render(request, 'login.html')
+
