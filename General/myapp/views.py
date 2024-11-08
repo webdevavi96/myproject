@@ -32,7 +32,7 @@ def register(request):
         if userPassword != confirmPassword:
            return HttpResponse("Password did not macth. Please enter a valid Password.")
         else:
-            newUser = User.objects.create_User(userName,userEmail,userPassword)
+            newUser = User.objects.create_user(username=userName,useremail=userEmail,Password=userPassword)
             newUser.save()
             return redirect('login.html')
     return render(request, 'register.html')
