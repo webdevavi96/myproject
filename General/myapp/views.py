@@ -1,6 +1,6 @@
 from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login,logout 	 
+from django.contrib.auth import authenticate,login as auth_login	 
 #from django.contrib.auth.decorators import login_required   	
      # Create your views here.
 #@login_required(login_url='login')	 
@@ -53,7 +53,7 @@ def login_page(request):
         user = authenticate(request, username=userName, password=Password)
         
         if user is not None:
-           login(request, user)
+           auth_login(request, user)
            return redirect('home')  # Use the URL name 'home'
         else:
            return HttpResponse("Username or password is incorrect. Please check your credentials.")
