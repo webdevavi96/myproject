@@ -92,10 +92,12 @@
     <div class="container my-4 d-flex justify-content-center align-items-center">
       <div class="col-md-6" id="signinForm">
         <h3 class="text-center">Sign In</h3>
+        
         <form action="" method="POST"> <!-- Corrected action and method -->
+          {% csrf_token %}
   <div class="mb-3">
     <label for="userName" class="form-label">Enter your username or Email address</label>
-    <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter your username or email address required> <!-- Added name attribute -->
+    <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter your username or email address" required>
   </div>
   <div class="mb-3">
     <label for="userPassword" class="form-label">Password</label>
