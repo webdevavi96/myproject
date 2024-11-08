@@ -114,34 +114,7 @@
   </div>
 
   <!-- Custom JS file -->
-  <script src="{% static 'scripts/min.js' %}">
-    //Declaring a function to confirm the password
-    // Declaring variables for the password and confirm password inputs and error message
-const userPassword = document.getElementById("userPassword");
-const confirmPassword = document.getElementById("confirmPassword");
-const errorMessage = document.getElementById("errorMessage");
-
-// Function to check if the passwords match
-function checkPassword() {
-    if (confirmPassword.value !== userPassword.value) {
-        errorMessage.textContent = "Password didn't match. Please check your input.";
-        errorMessage.style.color = "red";
-        console.log("Passwords don't match");
-    } else {
-        errorMessage.textContent = "Passwords matched!";
-        errorMessage.style.color = "green";
-        console.log("Passwords match");
-    }
-}
-
-// Add event listeners to both password fields to check on input
-userPassword.addEventListener('input', checkPassword);
-confirmPassword.addEventListener('input', checkPassword);
-
-// Logging the inputs for debugging
-console.log(userPassword, confirmPassword);
-
-  </script>
+  <script src="{% static 'scripts/min.js' %}"></script>
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
