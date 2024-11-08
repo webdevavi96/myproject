@@ -35,7 +35,7 @@ def register(request):
             newUser = User.objects.createUser(userName,userEmail,userPassword)
             newUser.save()
             return redirect('login.html')
-    return render('register.html')
+    return render(request, 'register.html')
 def login(request):
     if request.method == 'POST':
        userName = request.POST.get('userName')
