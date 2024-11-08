@@ -41,17 +41,17 @@ def register(request):
             # Create a new user
             user = User.objects.create_user(username=userName, email=userEmail, password=userPassword)
             user.save()
-            return redirect('login.html')  # Use the URL name 'login'
+            return redirect('login')  # Use the URL name 'login'
     
     return render(request, 'register.html')
 
 def login(request):
     if request.method == 'POST':
-        userName = request.POST.get('userName')
-        userPassword = request.POST.get('userPassword')
+        username = request.POST.get('userName')
+        password = request.POST.get('userPassword')
         
         # Authenticate user
-        user = authenticate(request, username=userName, password=userPassword)
+        user = authenticate(request, username=username, password=userpassword)
         
         if user is not None:
             login(request, user)
