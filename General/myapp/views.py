@@ -47,11 +47,11 @@ def register(request):
 
 def login(request):
     if request.method == 'POST':
-        username = request.POST.get('userName')
-        password = request.POST.get('userPassword')
-        
+        userName = request.POST.get('userName')
+        Password = request.POST.get('userPassword')
+        print(userName, Password)
         # Authenticate user
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username=userName, password=Password)
         
         if user is not None:
             login(request, user)
