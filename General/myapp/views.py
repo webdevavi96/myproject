@@ -52,7 +52,7 @@ def login(request):
         # Authenticate user
         user = authenticate(request, username=userName, password=Password)
         
-        if user is None:
+        if user is not None:
            login(request, user)
            return redirect('home')  # Use the URL name 'home'
         else:
