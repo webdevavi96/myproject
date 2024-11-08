@@ -21,12 +21,12 @@ from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('home/', views.home),
-    path('about/', views.about),
-    path('places/', views.places),
-    path('booking/', views.booking),
-    path('contactus/' , views.contactus),
-    path('register/', views.register),
+    path('', views.index, name="index"),
+    path('home/', views.home, name="home"),
+    path('about/', views.about, name="about"),
+    path('places/', views.places, name="places"),
+    path('booking/', views.booking, name="bookings"),
+    path('contactus/' , views.contactus, name="contactus"),
+    path('register/', views.register, name="register"),
     path('login/', views.login_page, name = "login"),
 ]
