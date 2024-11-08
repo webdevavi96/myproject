@@ -32,6 +32,11 @@ def register(request):
         
         if userPassword != confirmPassword:
             return HttpResponse("Password did not match. Please enter a valid password.")
+        
+        # Check if the username already exists
+        if User.objects.filter(username=userName).exists():
+           return HttpResponse("Username is already taken. Please choose another one.")
+                                    
         else:
             # Create a new user
             user = User.objects.create_user(username=userName, email=userEmail, password=userPassword)
