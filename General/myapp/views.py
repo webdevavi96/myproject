@@ -49,15 +49,18 @@ def login(request):
     if request.method == 'POST':
         userName = request.POST.get('userName')
         Password = request.POST.get('userPassword')
-        print(userName, Password)
         # Authenticate user
         user = authenticate(request, username=userName, password=Password)
         
-        if user is not None:
-            login(request, user)
-            return redirect('home')  # Use the URL name 'home'
-        else:
-            return HttpResponse("Username or password is incorrect. Please check your credentials.")
+        if user is None:
+           login(request, user)
+           return redirect('home')  # Use the URL name 'home'
+        else
+           return HttpResponse("Username or password is incorrect. Please check your credentials.")
     
     return render(request, 'login.html')
+
+def new_func(request):
+    Password = request.POST.get('userPassword')
+    return Password
 
