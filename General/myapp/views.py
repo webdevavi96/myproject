@@ -36,7 +36,7 @@ def register(request):
             # Create a new user
             user = User.objects.create_user(username=userName, email=userEmail, password=userPassword)
             user.save()
-            return redirect('login')  # Use the URL name 'login'
+            return redirect('login.html')  # Use the URL name 'login'
     
     return render(request, 'register.html')
 
