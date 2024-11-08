@@ -54,7 +54,7 @@ def login_page(request):
         
         if user is not None:
            auth_login(request, user)
-           return redirect('index')  # Use the URL name 'home'
+           return redirect('index')  # Use the URL name 'index'
         else:
            return HttpResponse("Username or password is incorrect. Please check your credentials.")
     
