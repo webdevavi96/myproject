@@ -28,5 +28,5 @@ urlpatterns = [
     path('booking/', views.booking),
     path('contactus/' , views.contactus),
     path('register/', views.register),
-    path('login/', views.login),
+    path('login/', views.login_page, name = "login"),
 ]
