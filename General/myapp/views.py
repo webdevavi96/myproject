@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate,login as auth_login
 #@login_required(login_url='login')	 
 
 def home(request):
-    return render(request, 'index.html')
+    return render(request, '.html')
    	 
 def about(request):
     return render(request, 'about.html')
@@ -58,7 +58,7 @@ def login_page(request):
     
     return render(request, 'login.html')
 
-def new_func(request):
-    Password = request.POST.get('userPassword')
-    return Password
+#def new_func(request):
+   # Password = request.POST.get('userPassword')
+   # return Password
 
