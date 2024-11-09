@@ -107,7 +107,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
+
+DATETIME_FORMAT = "m/d/Y h:i A"  # for 12-hour datetime format
+
+TIME_FORMAT = "h:i A"            # for 12-hour time format
 
 USE_I18N = True
 
