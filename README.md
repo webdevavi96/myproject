@@ -1,4 +1,4 @@
-# myproject
+# travelvista
 
 <h1 align="center">Hi 👋, I'm Avinash Chaurasiya</h1>
 <h3 align="center">A passionate frontend developer from India. I'm college student</h3>
@@ -11,7 +11,7 @@
 
 - 🤝 I’m looking for help with [Travelvista](https://github.com/webdevavi96/myproject)
 
-- 👨‍💻 All of my projects are available at [Currently only on github : https://github.com/webdevavi96](Currently only on github : https://github.com/webdevavi96)
+- 👨‍💻 All of my projects are available at (Currently only on github : https://github.com/webdevavi96)
 
 - 📝 I regularly write articles on [Currentl unavailable](Currentl unavailable)
 
