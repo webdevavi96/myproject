@@ -1,10 +1,9 @@
-from django.shortcuts import render,HttpResponse,redirect
+from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login as auth_login	 
-#from django.contrib.auth.decorators import login_required   	
+from django.contrib.auth import authenticate,login as auth_login, logout as auth_logout 
+from django.contrib.auth.decorators import login_required   
      # Create your views here.
      
-@login_required(login_url='login_page')	 
 
 def home(request):
     return render(request, '.html')
@@ -53,12 +52,20 @@ def login_page(request):
         
         if user is not None:
            auth_login(request, user)
-           return redirect('home')  # Use the URL name 'index'
+           return redirect('profile')  # Use the URL name 'index'
         else:
            return HttpResponse("Username or password is incorrect. Please check your credentials.")
     
     return render(request, 'login.html')
+    
+@login_required
+def profile_page(request):
+    return render(request, 'profile.html', {'user': request.user})
 
+def logout_page(request):
+    auth_logout(request)
+    return redirect('login')
+    
 #def new_func(request):
    # Password = request.POST.get('userPassword')
    # return Password
