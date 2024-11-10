@@ -3,7 +3,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login as auth_login	 
 #from django.contrib.auth.decorators import login_required   	
      # Create your views here.
-#@login_required(login_url='login')	 
+     
+@login_required(login_url='login_page')	 
 
 def home(request):
     return render(request, '.html')
