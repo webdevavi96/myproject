@@ -54,7 +54,7 @@ def login_page(request):
            auth_login(request, user)
            return redirect('profile')  # Use the URL name 'index'
         else:
-           return HttpResponse("Username or password is incorrect. Please check your credentials.")
+           return render(request, 'login.html', {'error': 'Username or password is incorrect.'})
     
     return render(request, 'login.html')
     
