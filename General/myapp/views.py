@@ -75,3 +75,10 @@ def logout_page(request):
    # Password = request.POST.get('userPassword')
    # return Password
 
+
+#for debugging perpose
+def profile_page(request):
+    print(f"Session ID: {request.session.session_key}")
+    if request.user.is_authenticated:
+        return render(request, 'profile.html', {'user': request.user})
+    return redirect('login')
