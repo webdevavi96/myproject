@@ -86,6 +86,10 @@
           <form action="" method="POST">
             {% csrf_token %}
             <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required>
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required>
               <label for="userName" class="form-label">Name</label>
               <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter your name" required>
             </div>
