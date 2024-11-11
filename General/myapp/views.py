@@ -69,6 +69,7 @@ def profile_page(request):
 
 def logout_page(request):
     auth_logout(request)
+    request.session.flush()
     return redirect('login')
     
 #def new_func(request):
