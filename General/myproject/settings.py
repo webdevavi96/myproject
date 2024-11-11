@@ -131,3 +131,18 @@ STATICFILES_DIRS=[
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Session Settings
+
+# Duration for which session cookies are valid (in seconds)
+SESSION_COOKIE_AGE = 86400  # 1 day
+
+# Whether the session cookie should expire when the browser is closed
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+# Store session data in the database
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+# Whether the session should be saved on every request
+SESSION_SAVE_EVERY_REQUEST = True
