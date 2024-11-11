@@ -20,8 +20,9 @@ from myapp import views
 
 
 urlpatterns = [
+    path('', lambda request: redirect('home')),
     path('admin/', admin.site.urls),
-    path('', views.home, name="home"),
+    path('home', views.home, name="home"),
     path('about/', views.about, name="about"),
     path('places/', views.places, name="places"),
     path('booking/', views.booking, name="bookings"),
