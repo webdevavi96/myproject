@@ -14,7 +14,7 @@ def about(request):
 def places(request):
     return render(request, 'places.html')
    	 
- @login_required  	 
+@login_required  	 
 def booking(request):
     return render(request, 'booking.html')
     
@@ -63,7 +63,7 @@ def login_page(request):
 @login_required
 def profile_page(request):
     if not request.user.is_authenticated:
-         return redirect('login')  # Redirect to login page if the user is not authenticated
+       return redirect('login')  # Redirect to login page if the user is not authenticated
     
     return render(request, 'profile.html', {'user': request.user})
 
