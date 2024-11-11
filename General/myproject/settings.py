@@ -141,3 +141,4 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Store session data in 
 SESSION_SAVE_EVERY_REQUEST = True  # Save the session on every request
 SESSION_COOKIE_HTTPONLY = True  # Ensure session cookie is HttpOnly (more secure)
 SESSION_COOKIE_SECURE = False  # Set to True if using HTTPS (ensure secure cookies)
+SESSION_COOKIE_DOMAIN = None  # Ensure this is None or not set for local development
