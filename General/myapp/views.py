@@ -71,8 +71,15 @@ def profile_page(request):
     return render(request, 'profile.html', {'user': request.user})
 
 def logout_page(request):
-    auth_logout(request)
-    return redirect('home') 
+    auth_logout(request)  # Logs out the user
+    request.session.flush()  # Clears session data
+
+    # Clear the session cookie explicitly
+    response = redirect('home')
+    response.delete_cookie('sessionid')  # Remove the session cookie
+
+    return response
+    
     
 #for debugging perpose
 """
