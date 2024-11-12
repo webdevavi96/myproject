@@ -2,8 +2,12 @@ from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login as auth_login, logout as auth_logout 
 from django.contrib.auth.decorators import login_required   
+import logging
+
      # Create your views here.
      
+logger = logging.getLogger(__name__)
+
 
 def home(request):
     return render(request, 'index.html')
@@ -67,17 +71,27 @@ def profile_page(request):
     
     return render(request, 'profile.html', {'user': request.user})
 
+"""
 def logout_page(request):
     auth_logout(request)
     request.session.flush()
-    response = redirect('home')  # Redirect to the login page
-    response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
-    response['Pragma'] = 'no-cache'
-    response['Expires'] = '0'
-    response.delete_cookie('sessionid')  # Remove session cookie
+    response = redirect('login')
+    response.delete_cookie('sessionid')  # Explicitly remove sessionid cookie
+    response.delete_cookie('csrftoken')  # If CSRF token is also causing issues
     return response
     
+"""
 #for debugging perpose
+def logout_page(request):
+    logger.info(f"User before logout: {request.user}")
+    auth_logout(request)
+    request.session.flush()
+    logger.info("Session flushed.")
+    response = redirect('login')
+    response.delete_cookie('sessionid')
+    logger.info(f"User after logout: {request.user}")
+    return response
+    
 """
 def profile_page(request):
     print(f"Session ID: {request.session.session_key}", flush=True)
