@@ -71,25 +71,35 @@
       </nav>
     </div>
 
-    <main class="row w-100 m-0 p-0 justify-content-center align-items-center" style="min-height: 100vh;">
-      <div class="container my-4 d-flex justify-content-center align-items-center">
-        <div class="col-md-6" id="profileContent">
-          <h3 class="text-center">Profile</h3>
-          <p class="text-center">Welcome, <strong>{{ user.first_name }} {{user.last_name }}</strong>!</p>
-          <p class="text-center">This is your profile page.</p>
-          <form action="{% url 'logout' %}" method="POST">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-primary w-100">Logout</button>
-          </form>
-        </div>
+   <main class="row w-100 m-0 p-0 justify-content-center align-items-center" style="min-height: 100vh; background: linear-gradient(135deg, #74ebd5, #acb6e5);">
+  <div class="container my-4 d-flex justify-content-center align-items-center">
+    <div class="col-md-6 p-4 rounded shadow-lg" id="profileContent" style="background-color: white; border-radius: 15px;">
+      <div class="text-center">
+        <img src="{{ user.profile_picture_url }}" alt="Profile Picture" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover; border: 4px solid #007bff;">
+        <h3 class="text-dark">Greetings, <strong>{{ user.username }}</strong>!</h3>
       </div>
+      <div class="mt-4">
+        <h4 class="text-primary">Your Details:</h4>
+        <ul class="list-unstyled" style="font-size: 16px; line-height: 1.8;">
+          <li><strong>First Name:</strong> {{ user.first_name }}</li>
+          <li><strong>Last Name:</strong> {{ user.last_name }}</li>
+          <li><strong>Email Address:</strong> {{ user.email }}</li>
+          <li><strong>Phone Number:</strong> {{ user.phone_number }}</li>
+        </ul>
+      </div>
+      <form action="{% url 'logout' %}" method="POST" class="mt-4">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary w-100" style="border-radius: 25px; font-size: 16px;">Logout</button>
+      </form>
+    </div>
+  </div>
+  <footer class="bg-dark w-100">
+    <p style="color: white; font-size: 14px; text-align: center; font-family: 'Allerta Stencil', sans-serif; padding: 5px;">
+      Copyrights reserved at &copy; TRAVEL VISTA official.....
+    </p>
+  </footer>
+</main>
 
-      <footer class="bg-dark w-100">
-        <p style="color: white; font-size: 14px; text-align: center; font-family: 'Allerta Stencil', sans-serif; padding: 5px;">
-          copyrights reserved at &copy;TRAVEL VISTA official.....
-        </p>
-      </footer>
-    </main>
   </div>
 
   <!-- Custom JS file -->

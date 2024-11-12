@@ -70,7 +70,7 @@ def profile_page(request):
 def logout_page(request):
     auth_logout(request)
     request.session.flush()
-    return redirect('login')
+    return redirect('home')
     
 #def new_func(request):
    # Password = request.POST.get('userPassword')
@@ -78,8 +78,11 @@ def logout_page(request):
 
 
 #for debugging perpose
+"""
 def profile_page(request):
     print(f"Session ID: {request.session.session_key}", flush=True)
     if request.user.is_authenticated:
         return render(request, 'profile.html', {'user': request.user})
     return redirect('login')
+    
+"""

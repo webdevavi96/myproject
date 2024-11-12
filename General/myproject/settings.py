@@ -136,9 +136,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Session Settings
 
 SESSION_COOKIE_AGE = 86400  # 1 day (session duration)
+
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # Keep the session alive when the browser is closed
+
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Store session data in the database
+
 SESSION_SAVE_EVERY_REQUEST = True  # Save the session on every request
+
 SESSION_COOKIE_HTTPONLY = True  # Ensure session cookie is HttpOnly (more secure)
+
 SESSION_COOKIE_SECURE = False  # Set to True if using HTTPS (ensure secure cookies)
-SESSION_COOKIE_DOMAIN = None  # Ensure this is None or not set for local development
+
+#SESSION_COOKIE_DOMAIN = None  # Ensure this is None or not set for local development
