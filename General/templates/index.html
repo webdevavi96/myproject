@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TRAVEL VISTA</title>
 
-<!-- icon placed here.... -->
-<link rel="shortcut icon" type="image/x-icon" href="/static/images/src/icon.png">
+  <!-- icon placed here.... -->
+  <link rel="shortcut icon" type="image/x-icon" href="/static/images/src/icon.png">
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
@@ -18,272 +18,286 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     /*for loading screen css is here*/
-/* From Uiverse.io by jeremyssocial */ 
-@keyframes blinkCursor {
-  50% {
-    border-right-color: transparent;
-  }
-}
+    /* From Uiverse.io by jeremyssocial */
+    @keyframes blinkCursor {
+      50% {
+        border-right-color: transparent;
+      }
+    }
 
-@keyframes typeAndDelete {
-  0%,
-  10% {
-    width: 0;
-  }
-  45%,
-  55% {
-    width: 6.2em;
-  } /* adjust width based on content */
-  90%,
-  100% {
-    width: 0;
-  }
-}
+    @keyframes typeAndDelete {
 
-.terminal-loader {
-  border: 0.1em solid #333;
-  background-color: #1a1a1a;
-  color: #0f0;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1em;
-  padding: 1.5em 1em;
-  width: 12em;
-  margin: 100px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-}
+      0%,
+      10% {
+        width: 0;
+      }
 
-.terminal-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1.5em;
-  background-color: #333;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  padding: 0 0.4em;
-  box-sizing: border-box;
-}
+      45%,
+      55% {
+        width: 6.2em;
+      }
 
-.terminal-controls {
-  float: right;
-}
+      /* adjust width based on content */
+      90%,
+      100% {
+        width: 0;
+      }
+    }
 
-.control {
-  display: inline-block;
-  width: 0.6em;
-  height: 0.6em;
-  margin-left: 0.4em;
-  border-radius: 50%;
-  background-color: #777;
-}
+    .terminal-loader {
+      border: 0.1em solid #333;
+      background-color: #1a1a1a;
+      color: #0f0;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1em;
+      padding: 1.5em 1em;
+      width: 12em;
+      margin: 100px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
 
-.control.close {
-  background-color: #e33;
-}
+    .terminal-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1.5em;
+      background-color: #333;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      padding: 0 0.4em;
+      box-sizing: border-box;
+    }
 
-.control.minimize {
-  background-color: #ee0;
-}
+    .terminal-controls {
+      float: right;
+    }
 
-.control.maximize {
-  background-color: #0b0;
-}
+    .control {
+      display: inline-block;
+      width: 0.6em;
+      height: 0.6em;
+      margin-left: 0.4em;
+      border-radius: 50%;
+      background-color: #777;
+    }
 
-.terminal-title {
-  float: left;
-  line-height: 1.5em;
-  color: #eee;
-}
+    .control.close {
+      background-color: #e33;
+    }
 
-.text {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.2em solid green; /* Cursor */
-  animation: typeAndDelete 4s steps(11) infinite,
-    blinkCursor 0.5s step-end infinite alternate;
-  margin-top: 1.5em;
-}
+    .control.minimize {
+      background-color: #ee0;
+    }
+
+    .control.maximize {
+      background-color: #0b0;
+    }
+
+    .terminal-title {
+      float: left;
+      line-height: 1.5em;
+      color: #eee;
+    }
+
+    .text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 0.2em solid green;
+      /* Cursor */
+      animation: typeAndDelete 4s steps(11) infinite,
+        blinkCursor 0.5s step-end infinite alternate;
+      margin-top: 1.5em;
+    }
 
 
-.loading-body{
-  height: 100dvh;
-  width: 100%;
-  place-items: center;
-}
-.main-body{
-  display: none;
-}
+    .loading-body {
+      height: 100dvh;
+      width: 100%;
+      place-items: center;
+    }
 
+    .main-body {
+      display: none;
+    }
   </style>
 </head>
+
 <body>
   <div class="loading-body">
     <!-- From Uiverse.io by jeremyssocial -->
-<div class="terminal-loader">
-  <div class="terminal-header">
-    <div class="terminal-title">Status</div>
-    <div class="terminal-controls">
-      <div class="control close"></div>
-      <div class="control minimize"></div>
-      <div class="control maximize"></div>
+    <div class="terminal-loader">
+      <div class="terminal-header">
+        <div class="terminal-title">Status</div>
+        <div class="terminal-controls">
+          <div class="control close"></div>
+          <div class="control minimize"></div>
+          <div class="control maximize"></div>
+        </div>
+      </div>
+      <div class="text">Loading...</div>
     </div>
-  </div>
-  <div class="text">Loading...</div>
-</div>
 
   </div>
-<div class="container-fluid m-0 p-0 main-body" style="border: 2px solid black;">
-  <div class="row m-0 p-0 sticky-top">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-    <i class="fa fa-book p-1"></i><a class="navbar-brand" href="/home">TRAVEL VISTA</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/places">Places</a>
-            </li>
-           
-            <li class="nav-item"><a href="/booking" class="nav-link">Bookings</a></li>
-            <li class="nav-item"><a href="/contactus" class="nav-link">Contact Us</a></li>
-          </ul>
-          <div class="btn1">
+  <div class="container-fluid m-0 p-0 main-body" style="border: 2px solid black;">
+    <div class="row m-0 p-0 sticky-top">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <i class="fa fa-book p-1"></i><a class="navbar-brand" href="/home">TRAVEL VISTA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="btn btn-outline-primary btn-sm " href="/login" role="button">My Account</a></li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/places">Places</a>
+              </li>
+
+              <li class="nav-item"><a href="/booking" class="nav-link">Bookings</a></li>
+              <li class="nav-item"><a href="/contactus" class="nav-link">Contact Us</a></li>
             </ul>
+            <div class="btn1">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="btn btn-outline-primary btn-sm" href="{% url 'profile' %}" role="button">My Profile</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                  <a class="btn btn-outline-primary btn-sm" href="{% url 'login' %}" role="button">Login</a>
+                </li>
+                {% endif %}
+              </ul>
+            </div>
+
           </div>
         </div>
-      </div>
-    </nav>
-  </div>
-
-<main class="row w-100 m-0 p-0">
-  <section id="landing"  class="landing row">
-    <p>
-  "Discover the diverse beauty of India with Travel Vista, your guide to the most breathtaking destinations across the country. Explore, plan, and experience India's hidden gems today!"
-    </p>
-    <div class="btn">
-   <a href="#main_page" id="next">Explore</a>
+      </nav>
     </div>
-  </section>
-  
-  <section class="main-content"  id="main_page">
-    <div class="row" >
-     <div class="mt-5" id="myUniqueDiv">
-        
-        
-  <div class="container">
-    <h1 class="text-center mt-4" style="text-align: center; padding: 5px; margin-top: 10px; background: #8E24AA; color: white;">Explore India</h1>
-    <div class="row">
 
-      <div class="col-md-8">
-        <div class="card">
-          <img src="/static/images/usr/Tajmahal.jpg" class="card-img-top" alt="Taj Mahal" style="height: 200px; object-fit: cover;">
-          <div class="card-body">
-            <h5 class="card-title">Taj Mahal, Agra</h5>
-            <p class="card-text">A UNESCO World Heritage site, the Taj Mahal is a symbol of love and an architectural marvel, attracting millions of visitors with its stunning beauty.</p>
-            <a href="#" class="btn btn-primary">Visit</a>
+    <main class="row w-100 m-0 p-0">
+      <section id="landing" class="landing row">
+        <p>
+          "Discover the diverse beauty of India with Travel Vista, your guide to the most breathtaking destinations across the country. Explore, plan, and experience India's hidden gems today!"
+        </p>
+        <div class="btn">
+          <a href="#main_page" id="next">Explore</a>
+        </div>
+      </section>
+
+      <section class="main-content" id="main_page">
+        <div class="row">
+          <div class="mt-5" id="myUniqueDiv">
+
+
+            <div class="container">
+              <h1 class="text-center mt-4" style="text-align: center; padding: 5px; margin-top: 10px; background: #8E24AA; color: white;">Explore India</h1>
+              <div class="row">
+
+                <div class="col-md-8">
+                  <div class="card">
+                    <img src="/static/images/usr/Tajmahal.jpg" class="card-img-top" alt="Taj Mahal" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Taj Mahal, Agra</h5>
+                      <p class="card-text">A UNESCO World Heritage site, the Taj Mahal is a symbol of love and an architectural marvel, attracting millions of visitors with its stunning beauty.</p>
+                      <a href="#" class="btn btn-primary">Visit</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="/static/images/usr/Goa.jpg" class="card-img-top" alt="Goa Beach" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Goa Beaches</h5>
+                      <p class="card-text">Known for its pristine beaches and vibrant nightlife, Goa is a perfect getaway for relaxation and fun, offering a unique blend of culture and leisure.</p>
+                      <a href="#" class="btn btn-primary">Visit</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="/static/images/usr/Jaipur-rajsthan.jpg" class="card-img-top" alt="Jaipur Rajasthan" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Jaipur, Rajasthan</h5>
+                      <p class="card-text">The Pink City is famous for its majestic forts and palaces, showcasing a rich history and vibrant culture, making it a must-visit destination in India.</p>
+                      <a href="#" class="btn btn-primary">Visit</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="/static/images/usr/pariyaram-kerala.jpg" class="card-img-top" alt="Pariyaram Kerala" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Pariyaram, Kerala</h5>
+                      <p class="card-text">Nestled amidst lush greenery, Pariyaram offers a serene escape with its backwaters and tranquil environment, perfect for nature lovers and peace seekers.</p>
+                      <a href="#" class="btn btn-primary">Visit</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="/static/images/usr/leh-ladakh.jpg" class="card-img-top" alt="Leh Ladakh" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Leh, Ladakh</h5>
+                      <p class="card-text">Explore the breathtaking landscapes of Leh-Ladakh, where majestic mountains and serene lakes offer a unique adventure for those seeking peace and beauty in the Himalayas.</p>
+                      <a href="#" class="btn btn-primary">Visit</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="card">
+                    <img src="/static/images/usr/nainital.jpg" class="card-img-top" alt="Nainital Uttarakhand" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Nainital, Uttarakhand</h5>
+                      <p class="card-text">Nainital, a scenic hill station in Uttarakhand, features a stunning lake surrounded by lush hills and gardens. Visitors can enjoy activities like boating, trekking, and exploring nearby attractions for an unforgettable experience.</p>
+                      <a href="#" class="btn btn-primary">Visit</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="card">
+                    <img src="/static/images/usr/Pangong-Lake-Ladakh.jpg" class="card-img-top" alt="Pangong Lake Ladakh">
+                    <div class="card-body">
+                      <h5 class="card-title">Pangong Lake, Ladakh</h5>
+                      <p class="card-text">Famous for its crystal-clear blue waters and stunning landscapes, Pangong Lake is a breathtaking destination that captivates every traveler with its unique beauty.</p>
+                      <a href="#" class="btn btn-primary">Visit</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="col-md-4">
-        <div class="card">
-          <img src="/static/images/usr/Goa.jpg" class="card-img-top" alt="Goa Beach" style="height: 200px; object-fit: cover;">
-          <div class="card-body">
-            <h5 class="card-title">Goa Beaches</h5>
-            <p class="card-text">Known for its pristine beaches and vibrant nightlife, Goa is a perfect getaway for relaxation and fun, offering a unique blend of culture and leisure.</p>
-            <a href="#" class="btn btn-primary">Visit</a>
-          </div>
-        </div>
-      </div>
+      <footer class="bg-dark w-100">
+        <p style="color: white; font-size: 14px; text-align: center; font-family: 'Allerta Stencil', sans-serif; padding: 5px;">
+          copyrights reserved at &copy;TRAVEL VISTA official.....
+        </p>
+      </footer>
+    </main>
 
-      <div class="col-md-4">
-        <div class="card">
-          <img src="/static/images/usr/Jaipur-rajsthan.jpg" class="card-img-top" alt="Jaipur Rajasthan" style="height: 200px; object-fit: cover;">
-          <div class="card-body">
-            <h5 class="card-title">Jaipur, Rajasthan</h5>
-            <p class="card-text">The Pink City is famous for its majestic forts and palaces, showcasing a rich history and vibrant culture, making it a must-visit destination in India.</p>
-            <a href="#" class="btn btn-primary">Visit</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card">
-          <img src="/static/images/usr/pariyaram-kerala.jpg" class="card-img-top" alt="Pariyaram Kerala" style="height: 200px; object-fit: cover;">
-          <div class="card-body">
-            <h5 class="card-title">Pariyaram, Kerala</h5>
-            <p class="card-text">Nestled amidst lush greenery, Pariyaram offers a serene escape with its backwaters and tranquil environment, perfect for nature lovers and peace seekers.</p>
-            <a href="#" class="btn btn-primary">Visit</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card">
-          <img src="/static/images/usr/leh-ladakh.jpg" class="card-img-top" alt="Leh Ladakh" style="height: 200px; object-fit: cover;">
-          <div class="card-body">
-            <h5 class="card-title">Leh, Ladakh</h5>
-            <p class="card-text">Explore the breathtaking landscapes of Leh-Ladakh, where majestic mountains and serene lakes offer a unique adventure for those seeking peace and beauty in the Himalayas.</p>
-            <a href="#" class="btn btn-primary">Visit</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card">
-          <img src="/static/images/usr/nainital.jpg" class="card-img-top" alt="Nainital Uttarakhand" style="height: 200px; object-fit: cover;">
-          <div class="card-body">
-            <h5 class="card-title">Nainital, Uttarakhand</h5>
-            <p class="card-text">Nainital, a scenic hill station in Uttarakhand, features a stunning lake surrounded by lush hills and gardens. Visitors can enjoy activities like boating, trekking, and exploring nearby attractions for an unforgettable experience.</p>
-            <a href="#" class="btn btn-primary">Visit</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card">
-          <img src="/static/images/usr/Pangong-Lake-Ladakh.jpg" class="card-img-top" alt="Pangong Lake Ladakh" >
-          <div class="card-body">
-            <h5 class="card-title">Pangong Lake, Ladakh</h5>
-            <p class="card-text">Famous for its crystal-clear blue waters and stunning landscapes, Pangong Lake is a breathtaking destination that captivates every traveler with its unique beauty.</p>
-            <a href="#" class="btn btn-primary">Visit</a>
-          </div>
-        </div>
-      </div>
-      
-    </div>
   </div>
-
-
-     </div>
-      </div>
-  </section>
-
-  <footer class="bg-dark w-100">
-    <p style="color: white; font-size: 14px; text-align: center; font-family: 'Allerta Stencil', sans-serif; padding: 5px;">
-      copyrights reserved at &copy;TRAVEL VISTA official.....
-    </p>
-  </footer>
-</main>
-
-</div>
 
 
 
