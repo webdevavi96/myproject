@@ -83,15 +83,16 @@ def logout_page(request):
 """
 #for debugging perpose
 def logout_page(request):
-    logger.info(f"User before logout: {request.user}")
-    auth_logout(request)
-    request.session.flush()
-    logger.info("Session flushed.")
-    response = redirect('login')
-    response.delete_cookie('sessionid')
+    logger.info(f"Session before logout: {request.session.items()}")
+    auth_logout(request)  # Logs out the user
+    request.session.flush()  # Clears session data
+    Session.objects.filter(session_key=request.session.session_key).delete()  # Manually remove session data from DB
+    logger.info(f"Session after flush: {request.session.items()}")
+    response = redirect('login')  # Redirect to the login page
+    response.delete_cookie('sessionid')  # Remove session cookie
     logger.info(f"User after logout: {request.user}")
     return response
-    
+
 """
 def profile_page(request):
     print(f"Session ID: {request.session.session_key}", flush=True)
