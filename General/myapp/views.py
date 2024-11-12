@@ -54,7 +54,7 @@ def login_page(request):
         
         if user is not None:
            auth_login(request, user)
-           return redirect('profile')  # Use the URL name 'index'
+           return redirect('home')  # Use the URL name 'index'
         else:
            return render(request, 'login.html', {'error': 'Username or password is incorrect.'})
     
@@ -70,7 +70,7 @@ def profile_page(request):
 def logout_page(request):
     auth_logout(request)
     request.session.flush()
-    response = redirect('login')  # Redirect to the login page
+    response = redirect('home')  # Redirect to the login page
     response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
     response['Pragma'] = 'no-cache'
     response['Expires'] = '0'
