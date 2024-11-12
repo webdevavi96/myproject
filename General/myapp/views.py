@@ -71,15 +71,22 @@ def profile_page(request):
     return render(request, 'profile.html', {'user': request.user})
 
 def logout_page(request):
-    auth_logout(request)  # Logs out the user
+    # Log the user out and clear session data
+    auth_logout(request)
     request.session.flush()  # Clears session data
 
-    # Clear the session cookie explicitly
+    # Create the response object to send back to the client
     response = redirect('home')
-    response.delete_cookie('sessionid')  # Remove the session cookie
+
+    # Delete the session cookie from the browser
+    response.delete_cookie('sessionid')  # Remove the default session cookie
+
+    # Optionally delete other cookies (e.g., CSRF token or custom cookies)
+    response.delete_cookie('csrftoken')  # Remove CSRF token cookie
+    # If you have any custom cookies, delete them here as well
+    # response.delete_cookie('your_custom_cookie_name')
 
     return response
-    
     
 #for debugging perpose
 """
