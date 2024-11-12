@@ -68,12 +68,15 @@ def profile_page(request):
     return render(request, 'profile.html', {'user': request.user})
 
 def logout_page(request):
-        auth_logout(request)  # Logs out the user
-        request.session.flush()  # Clears session data
-        response = redirect('home')
-        response.delete_cookie('sessionid')  # Removes session cookie
-        return response
-
+    auth_logout(request)
+    request.session.flush()
+    response = redirect('login')  # Redirect to the login page
+    response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response['Pragma'] = 'no-cache'
+    response['Expires'] = '0'
+    response.delete_cookie('sessionid')  # Remove session cookie
+    return response
+    
 #for debugging perpose
 """
 def profile_page(request):

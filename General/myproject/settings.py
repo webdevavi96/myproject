@@ -137,7 +137,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SESSION_COOKIE_AGE = 86400  # 1 day (session duration)
 
-SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # Keep the session alive when the browser is closed
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # Keep the session alive when the browser is closed
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Store session data in the database
 
