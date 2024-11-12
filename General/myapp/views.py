@@ -68,14 +68,11 @@ def profile_page(request):
     return render(request, 'profile.html', {'user': request.user})
 
 def logout_page(request):
-    auth_logout(request)
-    request.session.flush()
-    return redirect('home')
-    
-#def new_func(request):
-   # Password = request.POST.get('userPassword')
-   # return Password
-
+        auth_logout(request)  # Logs out the user
+        request.session.flush()  # Clears session data
+        response = redirect('home')
+        response.delete_cookie('sessionid')  # Removes session cookie
+        return response
 
 #for debugging perpose
 """
