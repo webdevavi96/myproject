@@ -1,12 +1,13 @@
 from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login as auth_login, logout as auth_logout 
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required   
-import logging
+#import logging
 
      # Create your views here.
      
-logger = logging.getLogger(__name__)
+#logger = logging.getLogger(__name__)
 
 
 def home(request):
@@ -51,18 +52,16 @@ def register(request):
 
 def login_page(request):
     if request.method == 'POST':
-        userName = request.POST.get('userName')
-        Password = request.POST.get('userPassword')
-        # Authenticate user
-        user = authenticate(request, username=userName, password=Password)
-        
-        if user is not None:
-           auth_login(request, user)
-           return redirect('home')  # Use the URL name 'index'
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            user = form.get_user()  # Get the authenticated user from the form
+            auth_login(request, user)  # Log the user in
+            return redirect('profile')  # Redirect to the home page or any other page
         else:
-           return render(request, 'login.html', {'error': 'Username or password is incorrect.'})
-    
-    return render(request, 'login.html')
+            return render(request, 'login.html', {'form': form, 'error': 'Username or password is incorrect.'})
+
+    form = AuthenticationForm()  # Initialize the form for GET request
+    return render(request, 'login.html', {'form': form})
     
 @login_required
 def profile_page(request):
@@ -71,17 +70,12 @@ def profile_page(request):
     
     return render(request, 'profile.html', {'user': request.user})
 
-"""
 def logout_page(request):
     auth_logout(request)
-    request.session.flush()
-    response = redirect('login')
-    response.delete_cookie('sessionid')  # Explicitly remove sessionid cookie
-    response.delete_cookie('csrftoken')  # If CSRF token is also causing issues
-    return response
+    return redirect('home') 
     
-"""
 #for debugging perpose
+"""
 def logout_page(request):
     logger.info(f"Session before logout: {request.session.items()}")
     auth_logout(request)  # Logs out the user
@@ -93,7 +87,6 @@ def logout_page(request):
     logger.info(f"User after logout: {request.user}")
     return response
 
-"""
 def profile_page(request):
     print(f"Session ID: {request.session.session_key}", flush=True)
     if request.user.is_authenticated:

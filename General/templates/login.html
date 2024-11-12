@@ -13,29 +13,35 @@
 
 <body>
 <div class="container-fluid m-0 p-0" style="border: 2px solid black;">
-  <main class="row w-100 m-0 p-0 justify-content-center align-items-center" style="min-height: 100vh;">
-    <div class="container my-4 d-flex justify-content-center align-items-center">
-      <div class="col-md-6" id="signinForm">
-        <h3 class="text-center">Sign In</h3>
-        {% if form.non_field_errors %}
-        <small class="text-danger">{{form.non_field_errors.as_ul}}</small>
-        {% endif %}
-        <form method="POST" action="{% url 'login' %}">
-          {% csrf_token %}
-          <div class="mb-3">
-            <label for="userName" class="form-label">Username or Email</label>
-            <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter your username or email" required>
-          </div>
-          <div class="mb-3">
-            <label for="userPassword" class="form-label">Password</label>
-            <input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="Enter your password" required>
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Sign In</button>
-          <a href="{% url 'register' %}" class="d-block text-center mt-3">Don't have an account? Register here...</a>
-        </form>
-      </div>
+ <main class="row w-100 m-0 p-0 justify-content-center align-items-center" style="min-height: 100vh;">
+  <div class="container my-4 d-flex justify-content-center align-items-center">
+    <div class="col-md-6" id="signinForm">
+      <h3 class="text-center">Sign In</h3>
+      
+      {% if form.non_field_errors %}
+        <small class="text-danger">{{ form.non_field_errors.as_ul }}</small>
+      {% endif %}
+      
+      <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+          <label for="id_username" class="form-label">Username or Email</label>
+          {{ form.username|add_class:"form-control" }} <!-- Automatically renders username or email field -->
+        </div>
+
+        <div class="mb-3">
+          <label for="id_password" class="form-label">Password</label>
+          {{ form.password|add_class:"form-control" }} <!-- Automatically renders password field -->
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Sign In</button>
+        
+        <a href="{% url 'register' %}" class="d-block text-center mt-3">Don't have an account? Register here...</a>
+      </form>
     </div>
-  </main>
+  </div>
+</main>
 
   <footer class="bg-dark w-100">
     <p style="color: white; font-size: 14px; text-align: center;">&copy; TRAVEL VISTA official</p>
