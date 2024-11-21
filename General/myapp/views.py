@@ -56,37 +56,20 @@ def login_page(request):
         if form.is_valid():
             user = form.get_user()  # Get the authenticated user from the form
             auth_login(request, user)  # Log the user in
-            return redirect('home')  # Redirect to the home page or any other page
+            return redirect('profile')  # Redirect to the home page or any other page
         else:
             return render(request, 'login.html', {'form': form, 'error': 'Username or password is incorrect.'})
 
     form = AuthenticationForm()  # Initialize the form for GET request
     return render(request, 'login.html', {'form': form})
     
-@login_required
 def profile_page(request):
-    if not request.user.is_authenticated:
-       return redirect('home')  # Redirect to login page if the user is not authenticated
-    
     return render(request, 'profile.html', {'user': request.user})
 
 def logout_page(request):
     # Log the user out and clear session data
     auth_logout(request)
-    request.session.flush()  # Clears session data
-
-    # Create the response object to send back to the client
-    response = redirect('home')
-
-    # Delete the session cookie from the browser
-    response.delete_cookie('sessionid')  # Remove the default session cookie
-
-    # Optionally delete other cookies (e.g., CSRF token or custom cookies)
-    response.delete_cookie('csrftoken')  # Remove CSRF token cookie
-    # If you have any custom cookies, delete them here as well
-    # response.delete_cookie('your_custom_cookie_name')
-
-    return response
+    return redirect('home')
     
 #for debugging perpose
 """
