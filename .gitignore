@@ -1,0 +1,32 @@
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+
+# Django migrations
+*/migrations/
+
+# Environment variables
+*.env
+.env/
+
+# Virtual environment
+venv/
+env/
+
+# Media files
+media/
+
+# Static files
+staticfiles/
+
+# Database
+*.sqlite3
+
+# IDE configurations
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
