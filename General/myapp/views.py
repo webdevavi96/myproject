@@ -56,7 +56,7 @@ def login_page(request):
         if form.is_valid():
             user = form.get_user()  # Get the authenticated user from the form
             auth_login(request, user)  # Log the user in
-            return redirect('profile')  # Redirect to the home page or any other page
+            return redirect('home')  # Redirect to the home page or any other page
         else:
             return render(request, 'login.html', {'form': form, 'error': 'Username or password is incorrect.'})
 
@@ -66,7 +66,7 @@ def login_page(request):
 @login_required
 def profile_page(request):
     if not request.user.is_authenticated:
-       return redirect('login')  # Redirect to login page if the user is not authenticated
+       return redirect('home')  # Redirect to login page if the user is not authenticated
     
     return render(request, 'profile.html', {'user': request.user})
 
