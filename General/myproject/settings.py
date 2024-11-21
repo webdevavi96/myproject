@@ -108,8 +108,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Kolkata'
-
 DATETIME_FORMAT = "m/d/Y h:i A"  # for 12-hour datetime format
 
 TIME_FORMAT = "h:i A"            # for 12-hour time format
@@ -132,60 +130,3 @@ STATICFILES_DIRS=[
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-# Session Settings
-
-SESSION_COOKIE_AGE = 86400  # 1 day (session duration)
-
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # Keep the session alive when the browser is closed
-
-SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Store session data in the database
-
-SESSION_SAVE_EVERY_REQUEST = False  # Save the session on every request
-
-SESSION_COOKIE_HTTPONLY = True  # Ensure session cookie is HttpOnly (more secure)
-
-SESSION_COOKIE_SECURE = False  # Set to True if using HTTPS (ensure secure cookies)
-
-#SESSION_COOKIE_DOMAIN = None  # Ensure this is None or not set for local development
-
-#debugging perpose logs
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {message}',
-            'style': '{',
-        },
-        'simple': {
-            'format': '{levelname} {message}',
-            'style': '{',
-        },
-    },
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
-        },
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': 'debug.log',  # Log file path
-            'formatter': 'verbose',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console', 'file'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-        '__main__': {
-            'handlers': ['console', 'file'],
-            'level': 'DEBUG',
-        },
-    },
-}
