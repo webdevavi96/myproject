@@ -18,8 +18,7 @@ def about(request):
    	 
 def places(request):
     return render(request, 'places.html')
-   	 
-@login_required  	 
+   	 	 
 def booking(request):
     return render(request, 'booking.html')
     
@@ -62,14 +61,16 @@ def login_page(request):
 
     form = AuthenticationForm()  # Initialize the form for GET request
     return render(request, 'login.html', {'form': form})
-    
+@login_required     
 def profile_page(request):
     return render(request, 'profile.html', {'user': request.user})
 
 def logout_page(request):
     # Log the user out and clear session data
     auth_logout(request)
+    request.session.flush()
     return redirect('home')
+     
     
 #for debugging perpose
 """
