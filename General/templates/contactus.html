@@ -36,27 +36,27 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href="/home">Home</a>
+              <a class="nav-link text-white" href="/home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about">About Us</a>
+              <a class="nav-link text-white" href="/about">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/places">Places</a>
+              <a class="nav-link text-white" href="/places">Places</a>
             </li>
       
-            <li class="nav-item"><a href="/booking" class="nav-link">Bookings</a></li>
-            <li class="nav-item"><a aria-current="page" href="/contactus" class="nav-link">Contact Us</a></li>
+            <li class="nav-item text-white"><a href="/booking" class="nav-link">Bookings</a></li>
+            <li class="nav-item active text-white"><a aria-current="page" href="/contactus" class="nav-link">Contact Us</a></li>
           </ul>
 <div class="btn1">
   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
     {% if user.is_authenticated %}
       <li class="nav-item">
-        <a class="btn btn-outline-primary btn-sm" href="{% url 'profile' %}" role="button">My Profile</a>
+        <a class="btn btn-outline-primary btn-sm text-white" href="{% url 'profile' %}" role="button">My Profile</a>
       </li>
     {% else %}
       <li class="nav-item">
-        <a class="btn btn-outline-primary btn-sm" href="{% url 'login' %}" role="button">Login</a>
+        <a class="btn btn-outline-primary btn-sm text-white" href="{% url 'login' %}" role="button">Login</a>
       </li>
     {% endif %}
   </ul>
