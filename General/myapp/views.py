@@ -69,8 +69,8 @@ def logout_page(request):
     # Log the user out and clear session data
     auth_logout(request)
     request.session.flush()
-    Session.objects.filter(session_key=request.session.session_key).delete()
-    response.delete_cookie('sessionid')
+    #Session.objects.filter(session_key=request.session.session_key).delete()
+    #response.delete_cookie('sessionid')
     return redirect('home')
      
     
