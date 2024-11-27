@@ -31,7 +31,6 @@ def register(request):
         lastName = request.POST.get('lastName')
         userName = request.POST.get('userName')
         userEmail = request.POST.get('userEmail')
-        userPhone = request.POST.get('userPhone')
         userPassword = request.POST.get('userPassword')
         confirmPassword = request.POST.get('confirmPassword')
         
@@ -44,7 +43,7 @@ def register(request):
                                     
         else:
             # Create a new user
-            user = User.objects.create_user(first_name = firstName, last_name = lastName, username=userName, email=userEmail,password = userPassword, phone_number = userPhone)
+            user = User.objects.create_user(first_name = firstName, last_name = lastName, username=userName, email=userEmail,password = userPassword)
             user.save()
             return redirect('login')  # Use the URL name 'login'
     
