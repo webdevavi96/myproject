@@ -25,31 +25,52 @@ def booking(request):
 def contactus(request):
    	return render(request, 'contactus.html')
    	 
+User = get_user_model()
+
 def register(request):
     if request.method == 'POST':
-        firstName = request.POST.get('firstName')
-        lastName = request.POST.get('lastName')
-        userName = request.POST.get('userName')
-        userEmail = request.POST.get('userEmail')
-        userPhone = request.POST.get('userPhone')
-        userPassword = request.POST.get('userPassword')
-        confirmPassword = request.POST.get('confirmPassword')
+        # Get and clean input data
+        firstName = request.POST.get('firstName', '').strip()
+        lastName = request.POST.get('lastName', '').strip()
+        userName = request.POST.get('userName', '').strip()
+        userEmail = request.POST.get('userEmail', '').strip()
+        userPhone = request.POST.get('userPhone', '').strip()
+        userPassword = request.POST.get('userPassword', '').strip()
+        confirmPassword = request.POST.get('confirmPassword', '').strip()
         
+        # Check for empty fields
+        if not all([firstName, lastName, userName, userEmail, userPhone, userPassword, confirmPassword]):
+            return HttpResponse("All fields are required. Please fill out the form completely.")
+        
+        # Password mismatch check
         if userPassword != confirmPassword:
-            return HttpResponse("Password did not match. Please enter a valid password.")
+            return HttpResponse("Passwords do not match. Please try again.")
         
         # Check if the username already exists
         if User.objects.filter(username=userName).exists():
-           return HttpResponse("Username is already taken. Please choose another one.")
-                                    
-        else:
-            # Create a new user
-            user = User.objects.create_user(first_name = firstName, last_name = lastName, username=userName, email=userEmail,password = userPassword, phone_number = userPhone)
-            user.save()
-            return redirect('login')  # Use the URL name 'login'
+            return HttpResponse("Username is already taken. Please choose another one.")
+        
+        # Check if the email is already registered
+        if User.objects.filter(email=userEmail).exists():
+            return HttpResponse("Email is already registered. Please use a different email address.")
+        
+        # Create the user
+        user = User.objects.create_user(
+            first_name=firstName,
+            last_name=lastName,
+            username=userName,
+            email=userEmail,
+            password=userPassword
+        )
+        # Set the phone number
+        user.phone_number = userPhone
+        user.save()
+        
+        # Redirect to login page
+        return redirect('login')  # Ensure 'login' is defined in your URLs
     
-    return render(request, 'register.html')
-
+  return render(request, 'register.html')
+  
 def login_page(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, data = request.POST)

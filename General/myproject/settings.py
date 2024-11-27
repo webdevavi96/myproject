@@ -28,6 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['webdevavi96.pythonanywhere.com']
 
+AUTH_USER_MODEL = 'General.CustomUser'
 
 # Application definition
 
