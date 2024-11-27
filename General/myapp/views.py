@@ -90,7 +90,7 @@ def register(request):
         user.save()
         
         # Redirect to login page
-      return redirect('login')  # Make sure 'login' is defined in your URL patterns
+        return redirect('login')  # Make sure 'login' is defined in your URL patterns
     
   return render(request, 'register.html')
   
