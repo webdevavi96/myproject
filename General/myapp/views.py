@@ -92,7 +92,7 @@ def register(request):
         # Redirect to login page
         return redirect('login')  # Make sure 'login' is defined in your URL patterns
     
-   return render(request, 'register.html')
+    return render(request, 'register.html')
   
 def login_page(request):
     if request.method == 'POST':
