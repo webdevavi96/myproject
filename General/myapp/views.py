@@ -81,16 +81,16 @@ def register(request):
         
         # Create a new user
         user = User.objects.create_user(
-            first_name=firstName,
-            last_name=lastName,
-            username=userName,
-            email=userEmail,
-            password=userPassword  # Password will be hashed
+          first_name=firstName,
+          last_name=lastName,
+          username=userName,
+          email=userEmail,
+          password=userPassword  # Password will be hashed
         )
         user.save()
         
         # Redirect to login page
-        return redirect('login')  # Make sure 'login' is defined in your URL patterns
+      return redirect('login')  # Make sure 'login' is defined in your URL patterns
     
   return render(request, 'register.html')
   
