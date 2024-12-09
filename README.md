@@ -5,7 +5,7 @@
 
 - 🔭 I’m currently working on [Travelvista](https://github.com/webdevavi96/myproject)
 
-- 🌱 I’m currently learning **Django framework, React js and Node ja**
+- 🌱 I’m currently learning **Django framework, React js and Node js**
 
 - 👯 I’m looking to collaborate on [Travelvista](https://github.com/webdevavi96/myproject)
 
