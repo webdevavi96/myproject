@@ -34,4 +34,14 @@
 
 <h3>Preview 💥</h3>
 
-<img src = "https://github.com/webdevavi96/myproject/blob/main/General/static/images/src/SmartSelect_20241209_113047_Chrome.jpg" >
+<img src = "https://github.com/webdevavi96/myproject/blob/main/General/static/images/src/SmartSelect_20241209_113047_Chrome.jpg" alt = "Home Page">
+
+<img src = "https://github.com/webdevavi96/myproject/blob/main/General/static/images/src/SmartSelect_20241209_113118_Chrome.jpg" alt = "About Us Page">
+
+<img src = "https://github.com/webdevavi96/myproject/blob/main/General/static/images/src/SmartSelect_20241209_113158_Chrome.jpg" alt = "Places to Visit Page">
+
+<img src = "https://github.com/webdevavi96/myproject/blob/main/General/static/images/src/SmartSelect_20241209_113254_Chrome.jpg" alt = "contact Us Page">
+
+<img src = "https://github.com/webdevavi96/myproject/blob/main/General/static/images/src/SmartSelect_20241209_113336_Chrome.jpg" alt = "Login Page">
+
+<img src = "https://github.com/webdevavi96/myproject/blob/main/General/static/images/src/SmartSelect_20241209_113405_Chrome.jpg" alt = "New User Registraion Page">
