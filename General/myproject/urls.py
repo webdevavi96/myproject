@@ -19,12 +19,6 @@ from django.urls import path, include
 from django.shortcuts import redirect
 from myapp import views
 
-
-from django.contrib import admin
-from django.urls import path, include
-from django.shortcuts import redirect
-from . import views
-
 urlpatterns = [
     path('', lambda request: redirect('home')),  # Redirect to home
     path('jet/', include('jet.urls', namespace='jet')),  # Main Jet URL
