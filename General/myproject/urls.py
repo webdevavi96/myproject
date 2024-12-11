@@ -20,18 +20,23 @@ from django.shortcuts import redirect
 from myapp import views
 
 
+from django.contrib import admin
+from django.urls import path, include
+from django.shortcuts import redirect
+from . import views
+
 urlpatterns = [
-    path('', lambda request: redirect('home')),
-    path('jet/', include('jet.urls', 'jet')),
-    path('jet/dashboard/', include('jet.dashboard.urls')),
-    path('admin/', admin.site.urls),
-    path('home', views.home, name="home"),
+    path('', lambda request: redirect('home')),  # Redirect to home
+    path('jet/', include('jet.urls', namespace='jet')),  # Main Jet URL
+    path('jet/dashboard/', include('jet.dashboard.urls', namespace='jet-dashboard')),
+    path('admin/', admin.site.urls),  # Admin interface
+    path('home/', views.home, name="home"),
     path('about/', views.about, name="about"),
     path('places/', views.places, name="places"),
     path('booking/', views.booking, name="bookings"),
-    path('contactus/' , views.contactus, name="contactus"),
+    path('contactus/', views.contactus, name="contactus"),
     path('register/', views.register, name="register"),
-    path('login/', views.login_page, name = "login"),
+    path('login/', views.login_page, name="login"),
     path('profile/', views.profile_page, name="profile"),
     path('logout/', views.logout_page, name="logout"),
 ]
