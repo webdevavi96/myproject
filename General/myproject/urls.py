@@ -22,7 +22,6 @@ from myapp import views
 
 urlpatterns = [
     path('', lambda request: redirect('home')),
-    path('jet/', include('jet.urls', 'jet')),  
     path('admin/', admin.site.urls),
     path('home', views.home, name="home"),
     path('about/', views.about, name="about"),
