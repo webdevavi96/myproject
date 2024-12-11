@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,25 +15,27 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
   <!-- Bootstrap importing via CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Custom Styles -->
   <style>
     body {
-      background-color: #f2f2f2; /* Light background */
+      background-color: #f2f2f2;
+      /* Light background */
     }
 
     #signupForm {
-      background-color: #fff; /* White background for the form */
+      background-color: #fff;
+      /* White background for the form */
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     }
 
     h3 {
-      color: #333; /* Darker heading */
+      color: #333;
+      /* Darker heading */
     }
 
     label {
@@ -40,19 +43,21 @@
     }
 
     .btn-primary {
-      background-color: #0066cc; /* Custom blue color */
+      background-color: #0066cc;
+      /* Custom blue color */
       border-color: #0066cc;
     }
 
     .btn-link {
-      color: #0066cc; /* Matching link color */
+      color: #0066cc;
+      /* Matching link color */
     }
   </style>
 </head>
 
 <body>
   <div class="container-fluid m-0 p-0" style="border: 2px solid black;">
-<!--     <div class="row m-0 p-0 sticky-top">
+    <!--     <div class="row m-0 p-0 sticky-top">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <i class="fa fa-book p-1"></i><a class="navbar-brand" href="/home">TRAVEL VISTA</a>
@@ -90,19 +95,23 @@
               <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required>
               <label for="lastName" class="form-label">Last Name</label>
               <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required>
-              <label for="userName" class="form-label">Name</label>
+              <label for="userName" class="form-label">Username</label>
               <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter your name" required>
             </div>
             <div class="mb-3">
               <label for="userEmail" class="form-label">Email address</label>
               <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="Enter your email" required>
             </div>
+<!--             <div class="mb-3">
+  <label for="userPhone" class="form-label">Your Phone No.</label>
+  <input type="number" class="form-control" id="userPhone" name="userPhone" placeholder="Enter your phone number" required>
+</div> -->
             <div class="mb-3">
               <label for="userPassword" class="form-label">Password</label>
               <input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="Create a password" required>
               <p id="errorMessage"></p>
-           <label for="confirmPassword" class="form-label">Confirm Password</label>
-           <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Your Password" required>
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Your Password" required>
             </div>
             <button type="submit" class="btn btn-primary w-100">Sign Up</button>
             <a href="/login" class="btn btn-link d-block text-center mt-3">Already have an account? Sign In</a>
@@ -124,4 +133,5 @@
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
 </html>
