@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'material',
-    'material.admin.default',
+    'material.admin',
     'widget_tweaks',
     'myapp',
 ]
