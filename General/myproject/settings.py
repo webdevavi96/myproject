@@ -32,13 +32,14 @@ ALLOWED_HOSTS = ['webdevavi96.pythonanywhere.com', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'jet.dashboard',
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'jet',
     'widget_tweaks',
     'myapp',
 ]
@@ -131,6 +132,3 @@ STATICFILES_DIRS=[
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-JET_DEFAULT_THEME = 'light'  
-JET_SIDE_MENU_COMPACT = True  
